@@ -8,13 +8,15 @@ Seminario Gráfica Computacional I es uno de cuatro seminarios en el séptimo se
 
 - tiene una cantidad de créditos menor a seminario de diseño gráfico;
 
-- ofrece una nivelación al desarrollo de Aplicaciones Web, por la vía del FrontEnd; y
+- ofrece una nivelación y proyección al desarrollo de Aplicaciones Web; y
 
-- exige la constante ejercitación y publicación de resultados en GitHub.
+- tiene un enfoque práctico-teórico, que exige la constante ejercitación y publicación de resultados en GitHub.
 
 La nota final del Seminario resulta del promedio entre:  
 
-- 1 nota por asistencia, puntualidad y publicación de resultado (registro clase a clase);
+- 1 nota por puntos de asistencia y puntualidad, acumulados clase a clase;
+
+- 1 nota por puntos de ejercitación, acumulados clase a clase;
 
 - 1 nota por evaluación parcial Nº1;
 
@@ -22,9 +24,9 @@ La nota final del Seminario resulta del promedio entre:
 
 - 1 nota por avance en trabajo final; y
 
-- 2 notas por resultado de trabajo final.
+- 1 nota por resultado de trabajo final.
 
-**Al aprobar el seminario, cada estudiante podrá desarrollar, de manera autónoma, un sitio web profesional o un prototipo avanzado de aplicación web, usando herramientas actuales. ** 
+**Al aprobar el seminario, cada estudiante podrá desarrollar, de manera autónoma, un prototipo avanzado de aplicación web, usando herramientas actuales de FrontEnd.** 
 
 Se proyecta la siguiente organización de las clases durante el semestre:
 
