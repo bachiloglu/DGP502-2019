@@ -69,6 +69,10 @@ Luego podemos comenzar a utilizar la grilla de 12 columnas (`col-…`) dentro de
 
 Entre las recién referidas, la clase más interesante es la de columnas (`class="col-…"`), en tanto ofrece varias opciones que  permiten indicar "cuántas columnas se toman" según el ancho del contenedor en la pantalla donde se visualiza el documento HTML. Las opciones se explican en [Grid System](https://getbootstrap.com/docs/4.0/layout/grid/#grid-options).
 
+#### Aplicación: 
+
+https://profesorfaco.github.io/DGP502-2019/clase-01/
+
 - - - - - - 
 
 #### Referencias:
