@@ -32,9 +32,7 @@ Para repasar estos lenguajes de descripción y programación, aprovechemos el si
 
 [Bootstrap](https://getbootstrap.com/) es un kit de herramientas de código abierto para la implementación de diseño "[responsive](https://es.wikipedia.org/wiki/Dise%C3%B1o_web_adaptable)" y "[mobile-first](https://en.ryte.com/wiki/Mobile_First)" de sitios y aplicaciones web. 
 
-[Bootstrap](https://getbootstrap.com/) fue desarrollado por [Twitter](https://twitter.com/getbootstrap), como un marco de trabajo ([framework](https://es.wikipedia.org/wiki/Framework)) para fomentar, en las herramientas internas, la consistencia en la implementación de la visualidad de la interfaz gráfica de usuario ([Front-End](https://es.wikipedia.org/wiki/Front-end_y_back-end)). Desde su origen ha avanzado en distintas versiones. Su versión estable más reciente es la 4.
-
-Con [Bootstrap](https://getbootstrap.com/) puedes implementar tanto prototipos rápidos como productos acabados, esto mediante el uso de los lenguajes habituales de Front-End para Web: Elementos de HTML5 relacionados con reglas de CSS3 predefinidas con [Sass](https://sass-lang.com/) ([Less](http://lesscss.org/) en versiones anteriores a la 4), además de Javascript simplificado por la biblioteca [jQuery](https://jquery.com/).
+Con [Bootstrap](https://getbootstrap.com/) puedes implementar tanto prototipos rápidos como productos acabados, esto mediante el uso de los lenguajes habituales de Front-End para Web: **Elementos de HTML5 relacionados con reglas de CSS3 predefinidas con [Sass](https://sass-lang.com/) ([Less](http://lesscss.org/) en versiones anteriores a la 4), además de Javascript simplificado por la biblioteca [jQuery](https://jquery.com/)**.
 
 Hay distintas maneras para comenzar a trabajar con Boostrap. Un grupo de opciones parten en su [descarga](https://getbootstrap.com/docs/4.0/getting-started/download/), pero una opción mucho más rápida es Bootstrap[CDN](https://es.wikipedia.org/wiki/Red_de_entrega_de_contenidos). Para usar esta última opción, el documento HTML debe verse, inicialmente, de la siguiente manera: 
 
@@ -59,7 +57,7 @@ Hay distintas maneras para comenzar a trabajar con Boostrap. Un grupo de opcione
 </html>
 ```
 
-Luego, confiando en la red de entrega de contenidos (Bootstrap[CDN](https://es.wikipedia.org/wiki/Red_de_entrega_de_contenidos)), podemos comenzar a utilizar la grilla de 12 columnas (`col-…`) dentro de la cada fila (`row`) dentro de un contenedor (`container` o `container-fluid`):
+Luego podemos comenzar a utilizar la grilla de 12 columnas (`col-…`) dentro de la cada fila (`row`) dentro de un contenedor (`container` o `container-fluid`):
 
 ```
 <div class="container">
@@ -77,17 +75,15 @@ Entre las recién referidas, la clase más interesante es la de columnas (`class
 
 #### Referencias:
 
-- [Bootstrap: Utilities for layout](https://getbootstrap.com/docs/4.0/layout/utilities-for-layout/)
-
-- [Bootstrap: Typography](https://getbootstrap.com/docs/4.0/content/typography/)
-
-- [Bootstrap: Tables](https://getbootstrap.com/docs/4.0/content/tables/)
+- [Bootstrap](https://getbootstrap.com/)
 
 - [Curso Gratuito de Bootstrap](https://codigofacilito.com/cursos/bootstrap)
 
 - [¿Cómo se utiliza Github pages?](https://developer.mozilla.org/es/docs/Learn/Using_Github_pages)
 
 - [Daniel Shiffman explica en YouTube como configurar una GitHub Page](https://youtu.be/bFVtrlyH-kc)
+
+- [StartBootstrap](https://startbootstrap.com/)
 
 - - - - - - - 
 
