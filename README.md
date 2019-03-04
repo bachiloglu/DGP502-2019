@@ -66,7 +66,7 @@ Clase 15 → Martes 9 de julio → Semana de Taller → No hay clases
 
 (Martes 16 de julio es feriado; y luego vienen las vacaciones de invierno).
 
-### Bibliografía
+#### Bibliografía
 
 - Crockford, D. (2008). *JavaScript: The Good Parts*.
 
@@ -74,7 +74,7 @@ Clase 15 → Martes 9 de julio → Semana de Taller → No hay clases
 
 - McCarthy, L., Reas, C. & Fry, B. (2015). *Getting Started with p5.js: Making Interactive Graphics in JavaScript and Processing*
 
-### Contactos
+#### Contactos
 
 E-mail: profesor@faco.cl | Web: http://profesor.faco.cl | GitHub: https://github.com/profesorfaco
 
