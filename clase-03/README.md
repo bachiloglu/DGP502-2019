@@ -60,38 +60,6 @@ $(document).ready(function(){
 
 Para comenzar a explorar jQuery es conveniente tener un ayudamemoria a la mano: [jQuery CheatSheet](https://htmlcheatsheet.com/jquery/)
 
-#### JSON
-
-[JSON (JavaScript Object Notation)](https://www.json.org/json-es.html) es un formato de texto sencillo para el intercambio de datos. Uno puede tomar un JSON en línea y "parsearlo" para que sus datos se conviertan en los datos de una variable en un JS. 
-
-Tomemos, por ejemplo, este JSON con un sumario de los últimos movimientos telúricos sobre 4.5 que han sido registrados en las últimas 24 horas la USGS: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson
-
-Para almacenar sus datos en una variable de nombre `a` utilizando JS, tenemos que escribir:
-
-```
-var request = new XMLHttpRequest();
-request.open('GET', ' https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson', true);
-request.onload = function () {
-  var a = JSON.parse(this.response);
-  console.log(a);
-}
-request.send();	
-```
-
-Pero se puede escribir menos si utilizamos jQuery: 
-
-```
-$.getJSON('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson', function(a) {
-  console.log(a);
-});
-```
-Luego, la será la variable `a` la que contendrá los datos de tal JSON, de acuerdo a las "reglas gramaticales" que correspondan al caso; sea un objeto, un arreglo con objetos, un objeto con arreglos, etc. 
-
-Para el JSON que nos ofrece la USGS, la consulta por la magnitud del temblor más reciente es `a["features"][0]["properties"]["mag"]` ó `a.features[0].properties.mag`
-
-La estructura y sus detalles se explican bajo el subtítulo de "Output" en: https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
-
-
 - - - - - - -
 
 #### Referencias:
@@ -107,14 +75,6 @@ jQuery:
 - [Quakit - jQuery Tutorial](https://www.quackit.com/jquery/tutorial/what_is_jquery.cfm)
 
 - [w3schools - jQuery Tutorial](https://www.w3schools.com/jquery/default.asp)
-
-JSON:
-
-- https://github.com/dariusk/corpora
-
-- https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
-
-- https://jsonlint.com/
 
 - - - - - - - 
 
