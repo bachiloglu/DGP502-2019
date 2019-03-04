@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,500,700');
+
+body {padding-top:7.5rem; font-family: 'IBM Plex Sans', sans-serif; font-weight: 300;}
+
+:lang(en){ font-style: italic; }
+
+.hidden{ display: none; }
+
+h1,h2,h3,h4,h5,h6{font-weight: 700; color:#01579b; letter-spacing: 0.1rem;}
+
+.navbar-brand{font-weight: 500; color:#002f6c;}
+
+strong{font-weight: 500;}
+
+form input{margin:.5rem .5rem .5rem 0; font-weight: 300; letter-spacing: 0.025rem;}
+
+form input[type="submit"]{color:rgba(255,255,255,0.75); background:#01579b; border-radius: 0.2rem; padding:0.1rem 0.75rem 0.2rem 0.75rem;}
+
+form input[type="submit"]:hover{color:rgba(255,255,255,0.75); background:#002f6c;}
+
+code{ font-family: 'IBM Plex Mono', monospace;; font-size:90%;}
+
+pre{color:#880e4f;}
+
+
