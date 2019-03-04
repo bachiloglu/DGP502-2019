@@ -1,4 +1,4 @@
-# Seminario Gráfica Computacional I → Clase 1
+# Seminario Gráfica Computacional I → Clase 2
 
 ### Martes 26 de marzo → JavaScript
 
