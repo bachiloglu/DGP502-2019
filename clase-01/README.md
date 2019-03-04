@@ -75,15 +75,21 @@ Entre las recién referidas, la clase más interesante es la de columnas (`class
 
 #### Referencias:
 
-- [Bootstrap](https://getbootstrap.com/)
+Bootstrap:
 
-- [Curso Gratuito de Bootstrap](https://codigofacilito.com/cursos/bootstrap)
+- [Bootstrap](https://getbootstrap.com/): The most popular HTML, CSS, and JS library in the world
+
+- [Bootstrap Made](https://bootstrapmade.com/): Free Bootstrap Templates
+
+- [Curso Gratuito de Bootstrap](https://codigofacilito.com/cursos/bootstrap): Codigo Facilito
+
+- [StartBootstrap](https://startbootstrap.com/): Bootstrap themes, templates, and more 
+
+GitHub
 
 - [¿Cómo se utiliza Github pages?](https://developer.mozilla.org/es/docs/Learn/Using_Github_pages)
 
 - [Daniel Shiffman explica en YouTube como configurar una GitHub Page](https://youtu.be/bFVtrlyH-kc)
-
-- [StartBootstrap](https://startbootstrap.com/)
 
 - - - - - - - 
 
