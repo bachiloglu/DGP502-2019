@@ -36,7 +36,7 @@ Se proyecta la siguiente organización de las clases durante el semestre:
 
 [Clase 3 → Martes 2 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-03) → jQuery
 
-[Clase 4 → Martes 9 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-04) → Evaluación parcial Nº1
+**[Clase 4 → Martes 9 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-04) → Evaluación parcial Nº1**
 
 [Clase 5 → Martes 16 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-05) → jQuery
 
@@ -46,7 +46,7 @@ Se proyecta la siguiente organización de las clases durante el semestre:
 
 (martes 7 de mayo en semana de receso otoño)
 
-[Clase 8 → Martes 14 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-08) → Evaluación parcial Nº2
+**[Clase 8 → Martes 14 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-08) → Evaluación parcial Nº2**
 
 (martes 21 de mayo es feriado)
 
@@ -54,11 +54,11 @@ Clase 9 → Martes 28 de mayo → Desarrollo de trabajo final
 
 Clase 10 → Martes 4 de junio → Desarrollo de trabajo final
 
-Clase 11 → Martes 11 de junio → Desarrollo de trabajo final
+**Clase 11 → Martes 11 de junio → Pre-Entrega final**
 
-Clase 12 → Martes 18 de junio → Pre-Entrega final 
+Clase 12 → Martes 18 de junio → Ajuste de trabajo final 
 
-Clase 13 → Martes 25 de junio → Entrega final 
+**Clase 13 → Martes 25 de junio → Entrega final**
 
 Clase 14 → Martes 2 de julio → Última Clase de Teóricos → Nota final
 
