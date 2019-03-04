@@ -6,7 +6,7 @@ Seminario Gráfica Computacional I es uno de cuatro seminarios en el séptimo se
 
 - tiene la misma cantidad de créditos en [SCT-Chile](https://sct-chile.consejoderectores.cl/que_es_sct_chile.php) que los seminarios de gestión y audiovisual;
 
-- tiene una cantidad de créditos inferior a seminario de diseño gráfico (el seminario más importante, al que deberíamos aportar desde los demás seminarios);
+- tiene una cantidad de créditos inferior a seminario de diseño gráfico (el seminario más importante, apronte a su proceso de titulación, al que deberíamos aportar los demás seminarios);
 
 - ofrece una nivelación y proyección al desarrollo de Aplicaciones Web; y
 
