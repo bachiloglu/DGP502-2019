@@ -69,7 +69,9 @@ Clase 15 → Martes 9 de julio → Semana de Taller → No hay clases
 ### Bibliografía
 
 - Crockford, D. (2008). *JavaScript: The Good Parts*.
+
 - Flanagan, D. (2010). *jQuery Pocket Reference: Read Less, Learn More*.
+
 - McCarthy, L., Reas, C. & Fry, B. (2015). *Getting Started with p5.js: Making Interactive Graphics in JavaScript and Processing*
 
 ### Contactos
