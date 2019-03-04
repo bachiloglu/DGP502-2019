@@ -24,6 +24,8 @@ El listado está organizado según preferencia; prefiera el primero, si no puede
 
 Cuando trabajamos con código fuente podemos describir o programar. HTML y CSS no son lenguajes de programación. [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript), [PHP](http://php.net/), [Phyton](https://www.python.org/) y [Ruby](https://www.ruby-lang.org/es/) sí lo son. Con estos últimos se pueden escribir programas informáticos.
 
+Entre los lenguajes de programación recién referidos, JavaScript es fundamental para el FrontEnd, razón por la que [comenzaremos a repasarlo (o conocerlo) el día de hoy](https://profesorfaco.github.io/DGP502-2019/clase-01/).
+
 #### Bootstrap
 
 [Bootstrap](https://getbootstrap.com/) es un kit de herramientas de código abierto para la implementación de diseño "[responsive](https://es.wikipedia.org/wiki/Dise%C3%B1o_web_adaptable)" y "[mobile-first](https://en.ryte.com/wiki/Mobile_First)" de sitios y aplicaciones web. 
