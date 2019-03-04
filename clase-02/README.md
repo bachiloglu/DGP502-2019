@@ -2,9 +2,9 @@
 
 ### Martes 26 de marzo → JavaScript
 
-JavaScript (en lo que siga JS; nunca Java) es un lenguaje de programación. Con este lenguaje se pueden escribir programas que serán ejecutados en un navegador web. Estos programas pueden ser incluidos o vinculados a una página web a modo de script, entre etiquetas `<script>…</script>`. 
+JavaScript (no confundir con Java) es un lenguaje de programación. Con este lenguaje se pueden escribir programas que serán ejecutados en un navegador web. Estos programas pueden ser incluidos o vinculados a una página web a modo de script, entre etiquetas `<script>…</script>`. 
 
-En un programa de JS podemos encontrar dos elementos básicos: código y datos. La parte del código es la que permite redactar instrucciones. La parte de datos es la que permite almacenar información con la que podríamos condicionar las instrucciones. Así, por ejemplo, dentro de un documento HTML podemos escribir: 
+En un programa de JS podemos encontrar código y datos; código es la parte que permite redactar instrucciones. La parte de datos es la que permite almacenar información con la que podríamos condicionar las instrucciones. Así, por ejemplo, podemos escribir: 
 
 ```
 <script>
@@ -35,7 +35,18 @@ Como JS es un lenguaje de programación que comenzamos a explorar, es recomendab
 
 - [Cheatography JavaScript Cheat Sheet](https://www.cheatography.com/davechild/cheat-sheets/javascript/pdf_bw/)
 
-#### 2. Variables
+Además, tenemos que tener presente que JavaScripo necesita del [DOM (Document Object Model)](https://www.w3schools.com/js/js_htmldom.asp), Modelo en Objetos para la Representación de Documentos. A través del DOM, los programas escritos en JS pueden acceder y modificar el contenido, estructura y estilo de la representación de la página web. Por ejemplo:
+
+```
+<script>
+  document.getElementById("unique").style.color="#FF0000";
+</script>
+```
+En este ejemplo accedemos a la representación del documento para obtener el elemento de identidad `unique`. Este elemento será modificado con un cambio de estilo: Su color visto pasará a ser rojo. 
+
+Modificar la representación de una página web es como "photoshopear" una imagen. Si capturaste 3 elementos y con Photoshop agregas un cuarto, en ningún caso modificas la realidad capturada, pero todos podrán ver una imagen con 4 elementos. Lo que modificas es lo representado. No se puede alterar lo presentado.
+
+#### Variables
 
 En programación, una variable está formada por un espacio en el sistema de almacenaje (memoria principal del computador) y un identificador asociado a dicho espacio. Este espacio contendrá una cantidad conocida o desconocida de datos, que pueden ir variando en la medida que el programa se ejecuta (y esta es la razón del nombre). 
 
@@ -59,23 +70,33 @@ var a = [ { name: "Sergey Prokopyev", craft: "ISS" }, { name: "Alexander Gerst",
 
 En este caso, si quisiera obtener el nombre "Sergey Prokopyek", tendría que ir por `a[0].name` o `a[0]["name"]`, porque se trata de un arreglo (`[…]`), que contiene objetos (`[{…},{…},{…}]`).
 
-#### 3. DOM
+#### JSON
 
-[DOM es Document Object Model](https://www.w3schools.com/js/js_htmldom.asp), Modelo en Objetos para la Representación de Documentos. A través del DOM, los programas escritos en JS pueden acceder y modificar el contenido, estructura y estilo de la representación de la página web. Por ejemplo:
+La estructura del objeto inspira al JavaScript Object Notation (JSON), un formato de texto sencillo para el intercambio de datos. Uno puede tomar un JSON en línea y "parsearlo" para que sus datos se conviertan en los datos de una variable en un JS. 
+
+Tomemos, por ejemplo, este JSON con un sumario de los últimos movimientos telúricos sobre 4.5 que han sido registrados en las últimas 24 horas la USGS: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson
+
+Para almacenar sus datos en una variable de nombre `a` utilizando JS, tenemos que escribir:
 
 ```
-<script>
-  document.getElementById("unique").style.color="#FF0000";
-</script>
+var request = new XMLHttpRequest();
+request.open('GET', ' https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson', true);
+request.onload = function () {
+  var a = JSON.parse(this.response);
+  console.log(a);
+}
+request.send();	
 ```
 
-En este ejemplo accedemos a la representación del documento para obtener el elemento de identidad `unique`. Este elemento será modificado con un cambio de estilo: Su color visto pasará a ser rojo.  
+Luego, será la variable `a` la que contendrá los datos de tal JSON, de acuerdo a las "reglas gramaticales" que correspondan al caso. Para el JSON que nos ofrece la USGS, la consulta por la magnitud del temblor más reciente es `a["features"][0]["properties"]["mag"]` ó `a.features[0].properties.mag`
 
-Modificar la representación de una página web es como "photoshopear" una imagen. Si capturaste 3 elementos y con Photoshop agregas un cuarto, en ningún caso modificas la realidad capturada, pero todos podrán ver una imagen con 4 elementos. Lo que modificas es lo representado. No se puede alterar lo presentado.
+La estructura y sus detalles se explican bajo el subtítulo de "Output" en: https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
 
 - - - - - - -
 
 #### Referencias
+
+JavaScript:
 
 - [Fundamentos de JavaScript](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 
@@ -86,6 +107,14 @@ Modificar la representación de una página web es como "photoshopear" una image
 - [JavaScript Tutorial](https://www.w3schools.com/js/)
 
 - [Programación en JavaScript/Variables](https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_JavaScript/Variables)
+
+JSON:
+
+- https://github.com/dariusk/corpora
+
+- https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
+
+- https://jsonlint.com/
 
 - - - - - - - 
 
