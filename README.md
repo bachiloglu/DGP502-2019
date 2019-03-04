@@ -4,13 +4,13 @@
 
 Seminario Gráfica Computacional I es uno de cuatro seminarios en el séptimo semestre de la carrera de Diseño Gráfico: 
 
-- tiene la misma cantidad de créditos en sistema SCT que los seminarios de gestión y audiovisual;
+- tiene la misma cantidad de créditos en [SCT-Chile](https://sct-chile.consejoderectores.cl/que_es_sct_chile.php) que los seminarios de gestión y audiovisual;
 
-- tiene una cantidad de créditos menor a seminario de diseño gráfico;
+- tiene una cantidad de créditos inferior a seminario de diseño gráfico (el seminario más importante, al que deberíamos aportar desde los demás seminarios);
 
 - ofrece una nivelación y proyección al desarrollo de Aplicaciones Web; y
 
-- tiene un enfoque práctico-teórico, que exige la constante ejercitación y publicación de resultados en GitHub.
+- tiene un enfoque práctico, que exige la constante ejercitación y publicación de resultados en GitHub.
 
 La nota final del Seminario resulta del promedio entre:  
 
