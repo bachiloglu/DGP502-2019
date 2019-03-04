@@ -8,7 +8,6 @@ Es una plataforma de desarrollo colaborativo que utiliza el sistema de control d
 
 Es necesario que cada estudiante tenga [su cuenta personal en GitHub](https://github.com/join). 
 
-
 #### 2. Editores de código fuente
 
 Hay muchos editores de código fuente en el mercado. En nuestro caso, nos limitaremos a las siguientes opciones:  
@@ -21,12 +20,9 @@ Hay muchos editores de código fuente en el mercado. En nuestro caso, nos limita
 
 El listado está organizado según preferencia; prefiera el primero, si no puede conseguir, vaya por el segundo; en caso que el primero y segundo fallen, vaya por el tercero.
 
-
 #### 3. Coding (descripción v/s programación)
 
 Cuando trabajamos con código fuente podemos describir o programar. HTML y CSS no son lenguajes de programación. [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript), [PHP](http://php.net/), [Phyton](https://www.python.org/) y [Ruby](https://www.ruby-lang.org/es/) sí lo son. Con estos últimos se pueden escribir programas informáticos.
-
-Para repasar estos lenguajes de descripción y programación, aprovechemos el siguiente repositorio: https://github.com/profesorfaco/bases 
 
 #### 4. Bootstrap
 
