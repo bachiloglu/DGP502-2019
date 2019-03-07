@@ -28,23 +28,21 @@ La nota final del Seminario resulta del promedio entre:
 
 **Al aprobar el seminario, cada estudiante podrá desarrollar, de manera autónoma, un prototipo avanzado de aplicación web, usando herramientas actuales de FrontEnd.** 
 
-Se proyecta la siguiente organización de las clases durante el semestre:
+Se proyecta la siguiente organización de las clases durante el semestre (versión actualizada; con el inicio de las clases de pregrado postergado al miércoles 13 de marzo):
 
-[Clase 1 → Martes 12 de marzo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-01) → Herramientas y contenidos básicos
+[Clase 1 → Martes 26 de marzo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-01) → Herramientas y contenidos básicos
 
-[Clase 2 → Martes 26 de marzo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-02) → JavaScript
+[Clase 2 → Martes 2 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-02) → JavaScript
 
-[Clase 3 → Martes 2 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-03) → jQuery
+[Clase 3 → Martes 9 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-03) → jQuery
 
-**[Clase 4 → Martes 9 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-04) → Evaluación parcial Nº1**
+**[Clase 4 → Martes 16 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-04) → Evaluación parcial Nº1**
 
-[Clase 5 → Martes 16 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-05) → jQuery
+[Clase 5 → Martes 23 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-05) → jQuery
 
-[Clase 6 → Martes 23 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-06) → p5.js
+[Clase 6 → Martes 30 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-06) → p5.js
 
-[Clase 7 → Martes 30 de abril](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-07) → p5.js
-
-(martes 7 de mayo en semana de receso otoño)
+[Clase 7 → Martes 7 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-07) → p5.js
 
 **[Clase 8 → Martes 14 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-08) → Evaluación parcial Nº2**
 
@@ -60,7 +58,7 @@ Clase 12 → Martes 18 de junio → Ajuste de trabajo final
 
 **Clase 13 → Martes 25 de junio → Entrega final**
 
-Clase 14 → Martes 2 de julio → Última Clase de Teóricos → Nota final
+Clase 14 → Martes 2 de julio → Última Clase de Teóricos → Promedio final
 
 Clase 15 → Martes 9 de julio → Semana de Taller → No hay clases
 
