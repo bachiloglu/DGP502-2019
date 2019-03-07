@@ -1,6 +1,6 @@
 # Seminario Gráfica Computacional I → Clase 7
 
-### Martes 30 de abril → p5.js
+### Martes 7 de mayo → p5.js
 
 - - - - - - - 
 
