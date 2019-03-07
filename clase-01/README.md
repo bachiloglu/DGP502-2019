@@ -1,6 +1,6 @@
 # Seminario Gráfica Computacional I → Clase 1
 
-### Martes 12 de marzo → Herramientas y contenidos básicos
+### Martes 26 de marzo → Herramientas y contenidos básicos
 
 #### Github
 
