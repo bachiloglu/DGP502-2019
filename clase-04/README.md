@@ -1,6 +1,6 @@
 # Seminario Gráfica Computacional I → Clase 4
 
-### Martes 9 de abril → Evaluación parcial Nº1
+### Martes 16 de abril → Evaluación parcial Nº1
 
 - - - - - - - 
 
