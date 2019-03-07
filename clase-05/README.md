@@ -1,6 +1,6 @@
 # Seminario Gráfica Computacional I → Clase 5
 
-### Martes 16 de abril → jQuery
+### Martes 23 de abril → jQuery
 
 
 - - - - - - - 
