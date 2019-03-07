@@ -1,6 +1,6 @@
 # Seminario Gráfica Computacional I → Clase 6
 
-### Martes 23 de abril → p5.js
+### Martes 30 de abril → p5.js
 
 [p5.js](https://p5js.org/download/) es una biblioteca de JavaScript creada por [Lauren McCarthy](http://lauren-mccarthy.com/about), con el objetivo original de [Processing](https://www.processing.org/): hacer la programación accesible a artistas, diseñadores, educadores y principiantes. 
 
