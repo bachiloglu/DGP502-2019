@@ -1,6 +1,6 @@
 # Seminario Gráfica Computacional I → Clase 3
 
-### Martes 9 de abril → jQuery
+### Martes 2 de abril → jQuery
 
 jQuery es una [biblioteca](https://es.wikipedia.org/wiki/Biblioteca_(informática)) de JS que simplifica:
 
