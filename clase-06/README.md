@@ -1,6 +1,6 @@
 # Seminario Gráfica Computacional I → Clase 6
 
-### Martes 23 de abril → Jquery
+### Martes 23 de abril → jQuery (segunda parte)
 
 Segunda parte.
 
