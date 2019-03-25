@@ -1,6 +1,6 @@
 # Seminario Gráfica Computacional I → Clase 2
 
-### Martes 2 de abril → Javascript
+### Martes 26 de marzo → JavaScript
 
 Javascript (no confundir con Java) es un lenguaje de programación. Con este lenguaje se pueden escribir programas que serán ejecutados en un navegador web. Estos programas pueden ser incluidos o vinculados a una página web a modo de script, entre etiquetas `<script>…</script>`. 
 
