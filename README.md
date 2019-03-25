@@ -46,7 +46,7 @@ Se proyecta la siguiente organización de las clases durante el semestre (versi�
 
 [Clase 8 → Martes 7 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-08) → p5.js
 
-**[Clase 9 → Martes 14 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-08) → Evaluación parcial Nº2**
+**[Clase 9 → Martes 14 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-09) → Evaluación parcial Nº2**
 
 (martes 21 de mayo es feriado)
 
