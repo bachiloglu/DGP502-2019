@@ -60,27 +60,25 @@ Para la **asignación** de un valor se utiliza un signo igual **=**, lo que no d
 
 Además de tener variables a las que se le asigna un valor numeral, entero o decimal (ej: `var a = 1;`), y variables a las que se les asigna una cadena de caracteres o *string* (ej: `var a = "uno";`), podemos tener una variable a la que se le asigna un arreglo o *array* `var a = ["uno", 2, "tres",4, "cinco"];`. Luego, dentro del arreglo, tenemos distintas posiciones partiendo del cero. Podemos obtener el valor en primera posición (uno) cuando escribimos `a[0]`.
 
-También podemos tener una variable a la que se le asigna un "object" como contenido: `var a = {uno:"gato", dos:"perro", tres:"tortuga", cuatro:"iguana"};`. En este caso, podemos pedir los contenidos del objeto *por su nombre*. Podemos obtener el valor "gato" cuando pedimos `a.uno`
+También podemos tener una variable a la que se le asigna un "object" como contenido: `var a = {mom : "Marge", dad : "Homer", boy : "Bart", girl : "Lisa", baby : "Maggie"};`. En este caso, podemos pedir los contenidos del objeto *por su nombre*. Podemos obtener el valor "Bart" cuando pedimos `a.boy`
 
 Luego podemos comenzar a mezclar:
 
 ```
-var a = [ { name: "Sergey Prokopyev", craft: "ISS" }, { name: "Alexander Gerst", craft: "ISS" }];
+var a = [{mom: "Edna (RIP)", dad: "Ned", children: ["Rod", "Todd"]},{ mom: "Marge", dad: "Homer", children: [ "Bart", "Lisa", "Maggie" ]}]
 ```
 
-En este caso, si quisiera obtener el nombre "Sergey Prokopyek", tendría que ir por `a[0].name` o `a[0]["name"]`, porque se trata de un arreglo (`[…]`), que contiene objetos (`[{…},{…},{…}]`).
+En este caso, si quisiera obtener el nombre "Todd", tendría que ir por `a[0].children[1]`.
 
 #### JSON
 
-La estructura del objeto inspira al JavaScript Object Notation (JSON), un formato de texto sencillo para el intercambio de datos. Uno puede tomar un JSON en línea y "parsearlo" para que sus datos se conviertan en los datos de una variable en un JS. 
-
-Tomemos, por ejemplo, este JSON con un sumario de los últimos movimientos telúricos sobre 4.5 que han sido registrados en las últimas 24 horas la USGS: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson
+La estructura del objeto inspira al JavaScript Object Notation (JSON), un formato de texto sencillo para el intercambio de datos. Uno puede tomar un JSON en línea y "parsearlo" para que sus datos se conviertan en los datos de una variable en un JS, como https://api.myjson.com/bins/rexzi
 
 Para almacenar sus datos en una variable de nombre `a` utilizando JS, tenemos que escribir:
 
 ```
 var request = new XMLHttpRequest();
-request.open('GET', ' https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson', true);
+request.open('GET', ' https://api.myjson.com/bins/rexzi', true);
 request.onload = function () {
   var a = JSON.parse(this.response);
   console.log(a);
@@ -88,9 +86,7 @@ request.onload = function () {
 request.send();	
 ```
 
-Luego, será la variable `a` la que contendrá los datos de tal JSON, de acuerdo a las "reglas gramaticales" que correspondan al caso. Para el JSON que nos ofrece la USGS, la consulta por la magnitud del temblor más reciente es `a["features"][0]["properties"]["mag"]` ó `a.features[0].properties.mag`
-
-La estructura y sus detalles se explican bajo el subtítulo de "Output" en: https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
+Luego, será la variable `a` la que contendrá los datos de tal JSON, de acuerdo a las "reglas gramaticales" que correspondan al caso.
 
 - - - - - - -
 
