@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Los siguientes metadatos son suficientes, por ahora -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Usamos el CSS de Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        #fijo {
+            top: 10px;
+            right: 10px;
+            position: fixed;
+        }
+    </style>
+    <title>Hola JavaScript!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col py-5">
+                <h1>Hola JavaScript!</h1>
+                <p>JavaScript (y otro montón de lenguajes de programación) nos permiten trabajar con JSON. Un documento JSON se puede ver así: <a href="https://api.myjson.com/bins/rexzi" target="_blank">https://api.myjson.com/bins/rexzi</a></p>
+                <p>Si revisas la Consola Javascript de tu navegador, verás algunos datos, dentro de un objeto.</p>
+            </div>
+        </div>
+    </div>
+    <select id="fijo" onchange="location=this.value;">
+        <option value="index.html">index.html</option>
+        <option value="datos.html">datos.html</option>
+        <option value="extra.html" selected>extra.html</option>
+    </select>
+    <!-- JavaScript -->
+    <script>
+      var request = new XMLHttpRequest();
+      request.open('GET', ' https://api.myjson.com/bins/rexzi', true);
+      request.onload = function () {
+        var a = JSON.parse(this.response);
+        console.log(a);
+      }
+      request.send(); 
+    </script>
+</body>
+
+</html>

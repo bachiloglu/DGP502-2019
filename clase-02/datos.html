@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Los siguientes metadatos son suficientes, por ahora -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Usamos el CSS de Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        #fijo {
+            top: 10px;
+            right: 10px;
+            position: fixed;
+        }
+    </style>
+    <title>Hola JavaScript!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col py-5">
+                <h1>Hola JavaScript!</h1>
+                <p>Además de los números enteros (<em>int</em>), están los decimales (<em>float</em>):</p>
+                <code>var a = 97.7</code>
+                <hr/>
+                <p>También están las cadenas de caracteres (<em>string</em>) que las podemos entender como letras, palabras o frases:</p>
+                <code>var a = "Radio Zero"</code>
+                <hr/>
+                <p>Otro modo de almacenar datos es el arreglo (<em>array</em>), que puede ser un conjunto de números, cadenadas de caracteres e incluyo otros arreglos:</p>
+                <code>var a = ["Radio Zero", 97.7]</code>
+                <hr/>
+                <p>JavaScript también la notación de Objeto (<em>object</em>), que nos permite identificar a cada contenido por el nombre al que se le asocia.</p>
+                <code>var a = {rol:"Radio", nombre:"Zero", dial:97.7}</code>
+                <hr/>
+                <p>En cada caso estoy creando y asignando datos a una variable de nombre <code>a</code>. Pero podría estar usando cualquier nombre con palabras (sin tildes ni acentos), evitando aquellas <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Palabras_Reservadas" target="_blank">reservadas por JavaScript</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <select id="fijo" onchange="location=this.value;">
+        <option value="index.html">index.html</option>
+        <option value="datos.html" selected>datos.html</option>
+        <option value="extra.html">extra.html</option>
+    </select>
+
+    <!-- JavaScript -->
+    <script>
+    </script>
+</body>
+
+</html>

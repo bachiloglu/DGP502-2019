@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Los siguientes metadatos son suficientes, por ahora -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Usamos el CSS de Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        #fijo {
+            top: 10px;
+            right: 10px;
+            position: fixed;
+        }
+    </style>
+    <title>Hola JavaScript!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col py-5">
+                <h1>Hola JavaScript!</h1>
+                <p>Aquí podemos concatenar o sumar dos números enteros (<em>int</em>).</p>
+                <div class="input-group py-3">
+                    <input name="primero" type="number">
+                    <input name="segundo" type="number">
+                    <!--cada botón ejecuta una función en el clic-->
+                    <button onclick="concatena()" type="button">Concatenar</button>
+                    <button onclick="suma()" type="button">Sumar</button>
+                </div>
+                <p>El resultado de la operación aparece en una alerta; en alguna parte del código encontrarán un <code>alert(a+b)</code>. Pero puede haber <a href="https://www.w3schools.com/js/js_output.asp" target="_blank">otras maneras de incluir este resultado en la visualización de la página web</a>. Por ejemplo:</p>
+                <ul>
+	                <li>Podemos escribirlo en la Consola de Javascript: <code>console.log(a+b)</code></li>
+	                <li>Podemos tomar un elemento de una identidad determinada, para que dentro suyo se incluya el resultado: <code>document.getElementById("aqui").innerHTML=(a+b)</code></li>
+	                <li>Podemos hacer que "re-escriba" el documento: <code>document.write(a+b)</code></li>
+            	</ul>
+                <span id="aqui"></span>
+            </div>
+        </div>
+    </div>
+    <select id="fijo" onchange="location=this.value;">
+        <option value="index.html" selected>index.html</option>
+        <option value="datos.html">datos.html</option>
+        <option value="extra.html">extra.html</option>
+    </select>
+    <!-- JavaScript -->
+    <script>
+        // Creo un par de variables
+        var a;
+        var b;
+        // Creo una concatenación
+        function concatena() {
+            //asigno a las variables lo ingresado en los ipunt
+            a = document.querySelector('input[name=primero]').value;
+            b = document.querySelector('input[name=segundo]').value;
+            //un caracteres más otro caracter => contatenar
+            alert(a + b);
+        }
+        // Creo una suma
+        function suma() {
+            //asigno a las variables lo ingresado en los ipunt
+            a = document.querySelector('input[name=primero]').value;
+            b = document.querySelector('input[name=segundo]').value;
+            //un número más otro número => sumar		
+            alert(Number(a) + Number(b));
+        }
+    </script>
+</body>
+
+</html>
