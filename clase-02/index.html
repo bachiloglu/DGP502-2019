@@ -36,6 +36,8 @@
 	                <li>Podemos tomar un elemento de una identidad determinada, para que dentro suyo se incluya el resultado: <code>document.getElementById("aqui").innerHTML=(a+b)</code></li>
 	                <li>Podemos hacer que "re-escriba" el documento: <code>document.write(a+b)</code></li>
             	</ul>
+                <!--está apareciendo aquí-->
+                <span class="alla"></span>
                 <span id="aqui"></span>
             </div>
         </div>
@@ -44,6 +46,7 @@
         <option value="index.html" selected>index.html</option>
         <option value="datos.html">datos.html</option>
         <option value="extra.html">extra.html</option>
+        <option value="mapa.html">mapa.html</option>
     </select>
     <!-- JavaScript -->
     <script>
@@ -55,8 +58,8 @@
             //asigno a las variables lo ingresado en los ipunt
             a = document.querySelector('input[name=primero]').value;
             b = document.querySelector('input[name=segundo]').value;
-            //un caracteres más otro caracter => contatenar
-            alert(a + b);
+            //un caracter más otro caracter => contatenar
+            document.getElementsByClassName("alla")[0].innerHTML=(a + b);
         }
         // Creo una suma
         function suma() {
@@ -64,7 +67,7 @@
             a = document.querySelector('input[name=primero]').value;
             b = document.querySelector('input[name=segundo]').value;
             //un número más otro número => sumar		
-            alert(Number(a) + Number(b));
+            document.getElementsByClassName("alla")[0].innerHTML=(Number(a) + Number(b));
         }
     </script>
 </body>

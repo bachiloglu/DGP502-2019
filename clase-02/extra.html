@@ -22,8 +22,10 @@
         <div class="row">
             <div class="col py-5">
                 <h1>Hola JavaScript!</h1>
-                <p>JavaScript (y otro montón de lenguajes de programación) nos permiten trabajar con JSON. Un documento JSON se puede ver así: <a href="https://api.myjson.com/bins/rexzi" target="_blank">https://api.myjson.com/bins/rexzi</a></p>
-                <p>Si revisas la Consola Javascript de tu navegador, verás algunos datos, dentro de un objeto.</p>
+                <p>JavaScript (y otro montón de lenguajes de programación) nos permiten trabajar con JSON. Un documento JSON se puede ver así: <a href="https://api.myjson.com/bins/1dvmn2" target="_blank">https://api.myjson.com/bins/1dvmn2</a></p>
+                <p>Si revisas la Consola Javascript de tu navegador, verás los datos en tal JSON, siendo parte de una variable.</p>
+                <span id="aqui"></span>
+
             </div>
         </div>
     </div>
@@ -31,14 +33,16 @@
         <option value="index.html">index.html</option>
         <option value="datos.html">datos.html</option>
         <option value="extra.html" selected>extra.html</option>
+        <option value="mapa.html">mapa.html</option>
     </select>
     <!-- JavaScript -->
     <script>
       var request = new XMLHttpRequest();
-      request.open('GET', ' https://api.myjson.com/bins/rexzi', true);
+      request.open('GET', 'https://api.myjson.com/bins/1dvmn2', true);
       request.onload = function () {
         var a = JSON.parse(this.response);
         console.log(a);
+        document.getElementById('aqui').innerHTML = ("Tengo " + a.length + " amigos.")
       }
       request.send(); 
     </script>
