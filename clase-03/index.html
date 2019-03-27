@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Los siguientes metadatos son suficientes, por ahora -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Usamos el CSS de Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        #fijo {
+            top: 1rem;
+            right: 1rem;
+            position: fixed;
+            z-index:999;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+    <title>Hola jQuery!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col py-5">
+                <h1>Hola jQuery!</h1>
+                <p>Ahora nos aprovechamos de un JSON que ofrece información sobre los temblores registrados por la USGS. Su información es "<a href="https://en.wikipedia.org/wiki/Parsing" target="_blank">parseada</a>" como un arreglo (<em>Array</em>) dentro de una variable.</p>
+                <div id="mapid" style="width: 100%; height: 60vh;"></div>
+            </div>
+        </div>
+    </div>
+    <select id="fijo" onchange="location=this.value;">
+        <option value="index.html" selected>index.html</option>
+        <option value="condicionado.html">condicionado.html</option>
+        <option value="localizado.html">localizado.html</option>
+    </select>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <!-- Parte de lo que sigue no serviría sin jQuery -->
+    <script>
+    $.getJSON( "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson", function(data) {
+        var todes = data.features;
+        console.log(todes);
+        var mymap = L.map('mapid').setView([0,-65],2);
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', { maxZoom: 10, id: 'mapbox.outdoors' }).addTo(mymap);
+        $.each(todes,function(i,valores) {
+            L.marker([valores.geometry.coordinates[1],valores.geometry.coordinates[0]]).addTo(mymap).bindPopup("<dl><dt>"+ valores.properties.mag + "</dt><dd>" + valores.properties.place + "</dd></dl>").closePopup();
+        });
+    })        
+    </script>
+</body>
+</html>
