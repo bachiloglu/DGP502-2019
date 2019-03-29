@@ -27,7 +27,7 @@
                 <h1>Hola jQuery!</h1>
                 <p>Ahora nos aprovechamos de un JSON que ofrece información sobre los temblores registrados por la USGS. Su información es "<a href="https://en.wikipedia.org/wiki/Parsing" target="_blank">parseada</a>" como un arreglo (<em>Array</em>) dentro de una variable.</p>
                 <div id="mapid" style="width: 100%; height: 60vh;"></div>
-                <ul></ul>
+                <aside class="card-columns"></aside>
             </div>
         </div>
     </div>
@@ -59,9 +59,9 @@
                     if(r >= 6){ importantes.push(data.features[x].properties.title)}
                 }
             console.log(importantes);
-            $('ul').before('<p class=\"pt-3\">Se han registrado ' + importantes.length + ' temblores sobre M 6.0 durante la última semana:</p>');
+            $('aside').before('<p class=\"pt-3\">Se han registrado ' + importantes.length + ' temblores sobre M 6.0 durante la última semana:</p>');
             for(var x = 0; x < importantes.length; x++){
-                $('ul').append('<li>'+importantes[x]+'</li>');
+                $('aside').append('<div class=\"card p-3 small\">'+importantes[x]+'</div></div>');
             }
         });    
     </script>
