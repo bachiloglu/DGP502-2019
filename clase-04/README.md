@@ -24,7 +24,7 @@ El provecho que se saque a las tecnologías recién mencionadas, se evaluará de
 | **CRITERIO**      |   **PUNTAJE**    |
 |:--------------|:------------:|
 | JSON VALIDADO, EN LÍNEA, CON UN MÍNIMO DE 9 ÍTEMS | 1.0 |
-| MENÚ FIJO, Y OPERATIVO, AL TOPE DE LA PÁGINA | 1.0 |
+| MENÚ FIJO (FIXED), Y OPERATIVO, AL TOPE DE LA PÁGINA | 1.0 |
 | HEADER CON VIDEO PERTINENTE DE FONDO | 1.0 |
 | SECCIÓN CON MAPA, DONDE ESTÉN MARCADOS LOS DATOS DEL JSON | 1.0 | 
 | SECCIÓN CON DETALLES DEL JSON, CON FOTOS, EN "CARDS" DE BOOTSTRAP | 1.0 |
