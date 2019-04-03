@@ -28,7 +28,7 @@ El provecho que se saque a las tecnologías recién mencionadas, se evaluará de
 | HEADER CON VIDEO DE FONDO | 1.0 |
 | SECCIÓN CON MAPA EN EL QUE ESTÉN MARCADOS LOS DATOS EN JSON | 1.0 | 
 | SECCIÓN CON DETALLES DE DATOS EN JSON, CON FOTOS, EN "CARDS" | 1.0 |
-| FOOTER CON NOMBRE DE CURSO Y ESTUDIANTE | 1.0 |
+| FOOTER CON NOMBRES DE CURSO Y ESTUDIANTE | 1.0 |
 | AJUSTES DE ESTILO CSS | 1.0 |
 | **SUMA TOTAL**        | **7.0** |
 - - - - - - - 
