@@ -98,9 +98,10 @@ Este documento se compuso con harto copy/paste
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
+        // Lo primero es obtener un JSON y parsearlo en una variable de nombre data
         $.getJSON("https://api.myjson.com/bins/ovhpk", function(data) {
             // Si imprimes data en consola logras dos cosas
-            // Lo primero es comprobar la obtención de ese JSON
+            // Lo primero es comprobar el parseo de JSON requerido
             // Lo segundo es conocer la estructura del JSON parseado
             console.log(data);
             // Luego puedes colocar el mapa, seteando un centro y zoom 
@@ -109,23 +110,23 @@ Este documento se compuso con harto copy/paste
                 maxZoom: 10,
                 id: 'mapbox.outdoors'
             }).addTo(mymap);
-            // Después puedes explorar los datos según posición en el arreglo
+            // Después puedes explorar el arreglo en dato, según su posición, con un ciclo for
             for (var x = 0; x < data.length; x++) {
                 // con esto se agregan puntos en el plano por cada dato
                 L.marker([data[x].ubicacion[0], data[x].ubicacion[1]]).addTo(mymap).bindPopup(data[x].nombre).closePopup();
-                // aprovechando el ciclo for, voy por cada parque
-                // para que el append no quede tan complejo, divido las partes a continuación
-                // copio el primer ejemplo en https://getbootstrap.com/docs/4.0/components/card/
+                // aprovechando el ciclo for, podemos crear otros elementos, fuera del mapa
+                // ver el primer ejemplo en https://getbootstrap.com/docs/4.0/components/card/
                 var primero = "<div class=\"col-sm-4 col-lg-3 my-3\"><div class=\"card\">";
                 var segundo = "<img src=\"" + data[x].foto + "\" class=\"card-img-top\">";
                 var tercero = "<div class=\"card-body\"><h5 class=\"card-title\">" + data[x].nombre + "</h5>";
                 var cuarto = "<p class=\"card-text\">" + data[x].ha + " hectáreas</p>";
                 var quinto = "<a href=\"" + data[x].url + "\" target=\"_blank\" class=\"btn btn-secondary btn-sm\">Wikipedia</a>";
-                var sexto = "</div></div></div>"
+                var sexto = "</div></div></div>";
+                // esto se agrega tantas veces como puntos en el mapa, porque estamos dentro del mismo ciclo for
                 $("#parques").append(primero + segundo + tercero + cuarto + quinto + sexto);
             }
         });
-        //Agrego el siguiente código para que baje y suba en 1 segundo, suavecito
+        //Agrego lo siguiente para que al clic del menú la página suba y baje en 1 segundo, suavecito
         $('a[href*="#"]:not([href="#"])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
               var target = $(this.hash);
