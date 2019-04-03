@@ -1,95 +1,144 @@
 <!doctype html>
+
+<!--
+
+Este documento se compuso con harto copy/paste
+
+1. El Starter Template de Bootstrap - en https://getbootstrap.com/docs/4.3/getting-started/introduction/
+
+2. El menú lo copiamos de los ejemplos de Bootstrap - https://getbootstrap.com/docs/4.3/examples/
+
+3. El header con un video lo copiamos de Startbootrap - https://startbootstrap.com/snippets/video-header/
+
+4. Luego, se agrega la biblioteca de Leaflet (que pueden copiar de ejercicios de las clases 2 y 3) - https://leafletjs.com/examples/quick-start/
+
+5. Finalmente, cuando intentamos programar la aparición automática de puntos en Leaflet nos damos cuenta que el jquery.slim.min.js no comprende la función $.getJSON(). Por eso: 
+
+5.1. Donde decía:
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+5.2. Ahora debe decir:    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+-->
+
 <html lang="es">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Parques nacionales</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+    <title>Grandes parques nacionales al Sur de Chile</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
-  </head>
-  <body>
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-  <a class="navbar-brand" href="#">Never expand</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarsExample01">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#top">Bienvenidos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#map">Mapa</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#detalles">Detalles</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+</head>
 
-<header id="top">
-  <div class="overlay"></div>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="tschile.mp4" type="video/mp4">
-  </video>
-  <div class="container h-100">
-    <div class="d-flex h-100 text-center align-items-center">
-      <div class="w-100 text-white">
-        <h1 class="display-3">Parques Nacionales</h1>
-        <p class="lead mb-0">Lindo país con vista al océano</p>
+<body id="top">
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#top">Bienvenidos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample01">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#map">Mapa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#detalles">Detalles</a>
+                </li>
+            </ul>
+        </div>
       </div>
-    </div>
-  </div>
-</header>
+    </nav>
 
-<section id="map">
+    <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <!--encontré un video de un condor-->
+            <source src="condor.mp4" type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-3">Parques Nacionales</h1>
+                    <p class="lead mb-0">Grandes reservas de riqueza natural al Sur de Chile</p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <div id="mapid" style="width: 100%; height: 60vh;"></div>
-
-</section>
-
-<section id="detalles">
-  <div class="container">
-  <div class="row"></div>
-  </div>
-</section>
-
-<footer>
-
-</footer>
-
+    <section id="map">
+        <div id="mapid" style="width: 100%; height: 70vh;"></div>
+    </section>
+    <section id="detalles" class="bg-light">
+        <div class="container">
+            <div class="row py-5" id="parques">
+                <!--aquí dentro se pone cada -->
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container-fluid">
+            <div class="row small py-2 bg-dark text-light">
+                <div class="col-sm-6 py-3">Seminario de Gráfica Computacional I</div>
+                <div class="col-sm-6 py-3 text-md-right">Nombre Apellido © 2019</div>
+            </div>
+        </div>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
     <script>
-    $.getJSON( "https://api.myjson.com/bins/8rxig", function(data) {
-        console.log(data);
-        var mymap = L.map('mapid').setView([-35,-70],4);
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', { maxZoom: 10, id: 'mapbox.outdoors' }).addTo(mymap);
-        for(var x = 0; x < data.length; x++){
-          L.marker([data[x].ubicacion[0],data[x].ubicacion[1]]).addTo(mymap).bindPopup(data[x].nombre).closePopup();
-
-          var fotito = "<img src=\""+data[x].foto+"\" class=\"img-fluid\">";
-
-          $(".row").append("<div class=\"col-sm-4 my-3\">"+fotito+"</div>");
-
-        }
-
-
-    })        
+        $.getJSON("https://api.myjson.com/bins/ovhpk", function(data) {
+            // Si imprimes data en consola logras dos cosas
+            // Lo primero es comprobar la obtención de ese JSON
+            // Lo segundo es conocer la estructura del JSON parseado
+            console.log(data);
+            // Luego puedes colocar el mapa, seteando un centro y zoom 
+            var mymap = L.map('mapid').setView([-49, -70], 4);
+            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                maxZoom: 10,
+                id: 'mapbox.outdoors'
+            }).addTo(mymap);
+            // Después puedes explorar los datos según posición en el arreglo
+            for (var x = 0; x < data.length; x++) {
+                // con esto se agregan puntos en el plano por cada dato
+                L.marker([data[x].ubicacion[0], data[x].ubicacion[1]]).addTo(mymap).bindPopup(data[x].nombre).closePopup();
+                // aprovechando el ciclo for, voy por cada parque
+                // para que el append no quede tan complejo, divido las partes a continuación
+                // copio el primer ejemplo en https://getbootstrap.com/docs/4.0/components/card/
+                var primero = "<div class=\"col-sm-4 col-lg-3 my-3\"><div class=\"card\">";
+                var segundo = "<img src=\"" + data[x].foto + "\" class=\"card-img-top\">";
+                var tercero = "<div class=\"card-body\"><h5 class=\"card-title\">" + data[x].nombre + "</h5>";
+                var cuarto = "<p class=\"card-text\">" + data[x].ha + " hectáreas</p>";
+                var quinto = "<a href=\"" + data[x].url + "\" target=\"_blank\" class=\"btn btn-secondary btn-sm\">Wikipedia</a>";
+                var sexto = "</div></div></div>"
+                $("#parques").append(primero + segundo + tercero + cuarto + quinto + sexto);
+            }
+        });
+        //Agrego el siguiente código para que baje y suba en 1 segundo, suavecito
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html, body').animate({
+                  scrollTop: (target.offset().top - 54)
+                }, 1000);
+                return false;
+              }
+            }
+        });
     </script>
+</body>
 
-
-  </body>
 </html>
