@@ -58,7 +58,41 @@ $(document).ready(function(){
 </script>
 ```
 
-Para comenzar a explorar jQuery es conveniente tener un ayudamemoria a la mano: [jQuery CheatSheet](https://htmlcheatsheet.com/jquery/)
+Pero `hide` no es el único "predicado" disponible en lo que respecta a efectos de animación en jQuery. Puedes encontrar otros en http://api.jquery.com/category/effects/
+
+Además de estos efectos de animación, existen distintas posibilidades de manipulación: https://api.jquery.com/category/manipulation/
+
+También existen varias maneras de hacer selección de un "sujeto": https://api.jquery.com/category/selectors/
+
+Para seguir explorando jQuery se puede seguir revisando la página, y guardar entre sus favoritos un ayudamemoria: [jQuery CheatSheet](https://htmlcheatsheet.com/jquery/)
+
+#### jQuery y JSON
+
+Para conectar con [la clase recién pasada](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-02), recordemos que vimos cómo tomar un JSON en línea y "parsear" sus datos en una variable de JavaScript. En el siguiente ejemplo la variable se llama `a`:
+
+```
+var request = new XMLHttpRequest();
+request.open('GET', 'https://api.myjson.com/bins/rexzi', true);
+request.onload = function () {
+  var a = JSON.parse(this.response);
+  console.log(a);
+}
+request.send();	
+```
+
+Se pude hacer lo mismo con jQuery, pero es mucho más sencillo:
+
+```
+$.getJSON('https://api.myjson.com/bins/rexzi', function(a) {
+        console.log(a);
+});
+```
+
+La única precaución sobre la que corresponde insistir es que si el origen de tus datos comienza con `http://`, sin `s`, tendrás conflictos de seguridad que impedirán el "parseo" correspondiente. Una vía de solución es el uso de `https://crossorigin.me/`. Por ejemplo:
+
+Si los datos están disponibles en `http://api.open-notify.org/astros.json` puedes escribir `https://crossorigin.me/http://api.open-notify.org/astros.json`
+
+Puedes encontrar detalles más técnicos respecto de este problema en [Control de acceso HTTP (CORS) de Mozilla Developers](https://developer.mozilla.org/es/docs/Web/HTTP/Access_control_CORS)
 
 - - - - - - -
 
