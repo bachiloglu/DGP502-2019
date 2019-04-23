@@ -1,0 +1,218 @@
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mineras en Chile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+</head>
+
+<body id="top">
+
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#top">Bienvenidos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample01">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#map">Mapa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#detalles">Detalles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#novedad">Novedad</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <!--encontré un video de un condor-->
+            <source src="chile2.mp4" type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-3">Minas Nacionales</h1>
+                    <p class="lead mb-0">Explotación de recursos naturales a lo largo de Chile</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="map">
+        <div id="mapid" style="width: 100%; height: 70vh;"></div>
+    </section>
+
+    <section id="detalles" class="bg-light">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-12 py-3">
+                    Selecciona minas según material extraído
+                    <select id="selector" onchange="mostrador()">
+                        <option>Todas las minas</option>
+                        <option>Minas de borato</option>
+                        <option>Minas de carbón</option>
+                        <option>Minas de cobre</option>
+                        <option>Minas de hierro</option>
+                        <option>Minas de oro</option>
+                        <option>Minas de plata</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark">
+        <div class="container">
+            <div class="row py-3">
+                <div class="card-columns" id="minas">
+                    <!--aquí hay un cambio-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="novedad">
+        <!--aquí coloco la "visualización"-->
+    </section>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row small py-2 bg-dark text-light">
+                <div class="col-sm-6 py-3">Seminario de Gráfica Computacional I</div>
+                <div class="col-sm-6 py-3 text-md-right">Camila Uribe © 2019</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $.getJSON("https://api.myjson.com/bins/156nd4", function(data) {
+                var mymap = L.map('mapid').setView([-36, -70], 4);
+                L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                    maxZoom: 8,
+                    id: 'mapbox.dark'
+                }).addTo(mymap);
+                for (var x = 0; x < data.length; x++) {
+                    var greenIcon = L.icon({
+                        iconUrl: 'img/yellow.png',
+                        iconSize: [30, 30], // size of the icon
+                    });
+                    L.marker([data[x].ubicacion[0], data[x].ubicacion[1]], {
+                        icon: greenIcon
+                    }).addTo(mymap).bindPopup(data[x].nombre).closePopup();
+                    var primero = "<div class=\"card " + data[x].material + "\">";
+                        var segundo = "<img src=\"" + data[x].foto + "\" class=\"card-img-top\">";
+                        var tercero = "<div class=\"card-body\">";
+                            var cuarto = "<h5 class=\"card-title\">" + data[x].nombre + "</h5>"
+                                var quinto = "<p class=\"card-text\">Material extraído: " + data[x].material + "</p>";
+                                var sexto = "<h5 class=\"card-title\">" + data[x].estado + "</h5>";
+                            var septimo = "<a href=\"" + data[x].url + "\" target=\"_blank\" class=\"btn btn-secondary btn-sm\">Wikipedia</a>";
+                        var octavo = "</div>";
+                    var noveno = "</div>";
+                    $("#minas").append(primero + segundo + tercero + cuarto + quinto + sexto + septimo + octavo + noveno);
+                }
+            }) // aquí cerramos la función que obtiene el JSON
+
+        function mostrador() {
+            
+            var x = document.getElementById("selector").value;
+            
+            if (x.includes("borato")) {
+                $(".Borato").show();
+                $(".Carbón, .Cobre, .Hierro, .Oro, .Plata").hide()
+            } else if (x.includes("carbón")) {
+                $(".Carbón").show()
+                $(".Borato, .Cobre, .Hierro, .Oro, .Plata").hide()
+            } else if (x.includes("cobre")) {
+                $(".Cobre").show();
+                $(".Borato, .Carbón, .Hierro, .Oro, .Plata").hide()
+            } else if (x.includes("hierro")) {
+                $(".Hierro").show();
+                $(".Borato, .Cobre, .Carbón, .Oro, .Plata").hide()
+            } else if (x.includes("oro")) {
+                $(".Oro").show();
+                $(".Borato, .Cobre, .Carbón, .Hierro, .Hierro, .Plata").hide()
+            } else if (x.includes("plata")) {
+                $(".Plata").show();
+                $(".Borato, .Cobre, .Carbón, .Hierro, .Hierro, .Oro").hide()
+            } else {
+                $(".Plata, .Borato, .Cobre, .Carbón, .Hierro, .Hierro, .Oro").show()
+            }
+
+        } // aquí cerramos la función que trabaja con el select
+
+        $('a[href*="#"]:not([href="#"])').click(function() {
+                
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: (target.offset().top - 54)
+                        }, 1000);
+                        return false;
+                    }
+                }
+            }) // aquí cerramos la función que nos permite el scroll más amigable
+
+        $(window).scroll(function() {
+                if ($(this).scrollTop() > 400) {
+                    $('nav').addClass("gris");
+                } else {
+                    $('nav').removeClass("gris");
+                }
+
+            }) // aquí cerramos la función que "transforma" al menú
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script>
+        var productores;
+
+        function preload(){
+            productores = loadJSON("https://api.myjson.com/bins/689tk");
+        }
+
+        function setup() {
+            createCanvas(windowWidth,600).parent("novedad");
+            background(230);
+            fill(0);
+            noStroke();
+            textAlign(CENTER);
+            rectMode(CENTER);
+            text('Principales productores de cobre del mundo', width/2, 100);
+            productores.cobre.forEach(function(productor,i){
+                ellipse((width/11)*(1+i), height/2, productor.tons/100, productor.tons/100);
+                text(productor.country, (width/11)*(1+i), (height/2)+100, 75, 75);
+            });
+        }
+        function draw() {
+            // hay casos en lo que puedes dibujar en el setup
+        }
+        function windowResized(){
+            resizeCanvas(windowWidth, 600);
+            background(230);
+        }        
+    </script>
+
+</body>
+
+</html>
