@@ -2,8 +2,6 @@
 
 ### Martes 16 de abril → Repaso
 
-### Entregas
-
 | Nombre    | Tema   | GitHub Page        |
 |:----------|:-------|:-------------------|
 | Ian Acevedo | Galerías de Arte | [Evaluacion-1](https://ianbrann.github.io/Evaluacion-1/) |
