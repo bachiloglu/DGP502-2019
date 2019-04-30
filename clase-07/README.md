@@ -16,9 +16,9 @@ function draw(){
 }
 ```
 
-Hay 2 partes. Una que se ejecuta una única vez, al inicio, y otra que se ejecuta una y otra vez, para dibujar lo que sea que se programe.
+Hay 2 partes funciones principales. Una que se ejecuta una única vez, al inicio, y otra que se ejecuta una y otra vez, para dibujar lo que sea que se programe.
 
-Puedes encontrar información oficial de p5.js, traducida al castellano por chilenos, en https://p5js.org/es/
+Puedes sumar otras funciones, y eso es lo que revisaremos hoy: https://profesorfaco.github.io/DGP502-2019/clase-07/
 
 ---------
 
