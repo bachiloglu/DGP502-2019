@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>p5.dom library</title>
+    <style>
+      #menu{
+        position: fixed;
+        bottom:2rem;
+        right:2rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 py-5" id="aca">
+          <h1 class="mb-5">Weather</h1>
+          <p>Veamos cómo está el tiempo en <span id="por-alla"></span></p>
+
+        </div>
+      </div>
+    </div>
+
+    <select id="menu" onchange="location=this.value;">
+        <option selected>../</option>
+        <option value="../index.html">index</option>
+        <option value="../button.html">button</option>
+        <option value="../input-changed.html">input-changed</option>
+        <option value="../slider-input.html">slider-input</option>
+        <option value="../next.html">next</option>
+    </select>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script>
+
+        console.log("Acá les dejo solitas/os");
+    
+    </script>
+  </body>
+</html>

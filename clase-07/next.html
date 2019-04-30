@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>p5.dom library</title>
+    <style>
+      #menu{
+        position: fixed;
+        bottom:2rem;
+        right:2rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col py-5">
+          <h1 class="mb-5">Next</h1>
+          <p>Para continuar la exploración incial de p5.js, utilizaremos su editor en línea</p>
+          <ul>
+            <li><a href="https://editor.p5js.org/profesorfaco/sketches/JYt_9R75T" target="_blank">Sketch</a> con una variable que contiene un objeto p5.Table resultante de la <a href="https://p5js.org/es/reference/#/p5/loadTable" target="_blank">carga de un CSV</a></li>
+            <li><a href="https://editor.p5js.org/profesorfaco/sketches/XJSJcAKfh" target="_blank">Sketch</a> con una variable que contiene un objeto o arreglo resultante de la <a href="https://p5js.org/es/reference/#/p5/loadJSON" target="_blank">carga de un JSON</a></li>
+            <li><a href="https://editor.p5js.org/profesorfaco/sketches/YIGnDZVAC" target="_blank">Sketch</a> con una variable que contiene un objeto XML resultante de la <a href="https://p5js.org/es/reference/#/p5/loadXML" target="_blank">carga de un XML</a></li>
+            <li><a href="https://editor.p5js.org/profesorfaco/sketches/yKB14D8RQ" target="_blank">Sketch</a> con una consulta a una <a href="https://api.chucknorris.io/" target="_blank">API de Chuck Norris</a></li>
+            <li><a href="https://editor.p5js.org/profesorfaco/sketches/DvO_4Lucl" target="_blank">Sketch</a> con una consulta a una <a href="https://mindicador.cl/" target="_blank">API de Indicadores económicos</a></li>
+            <li><a href="https://editor.p5js.org/profesorfaco/sketches/EVA9TKXl_" target="_blank">Sketch</a> con una consulta a la <a href="https://openweathermap.org/" target="_blank">API de OpenWeatherMap</a></li>
+          </ul>
+          <p>Luego volveremos por acá, para juntar y pegar las partes exploradas</p>
+          <ul>
+            <li><a href="sintesis/earthquakes.html">earthquakes</a></li>
+            <li><a href="sintesis/weather.html">weather</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <select id="menu" onchange="location=this.value;">
+        <option value="index.html">index</option>
+        <option value="button.html">button</option>
+        <option value="input-changed.html" selected>input-changed</option>
+        <option value="slider-input.html">slider-input</option>
+        <option value="next.html" selected>next</option>
+    </select>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script>
+
+      function setup(){
+        console.log("HOLI");
+      }
+
+
+    </script>
+  </body>
+</html>

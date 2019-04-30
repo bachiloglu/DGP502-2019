@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>p5.dom library</title>
+    <style>
+      #menu{
+        position: fixed;
+        bottom:2rem;
+        right:2rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col py-5">
+          <h1 class="mb-5">slider con input <span id="por-alla" class=ml-5></span></h1>
+          <p>Cada párrafo</p>
+          <p>cambia su tamaño</p>
+          <p>según la posición</p>
+          <p>del slider</p>
+          <p>¡Mueve el slider!</p>
+        </div>
+      </div>
+    </div>
+
+    <select id="menu" onchange="location=this.value;">
+        <option value="index.html">index</option>
+        <option value="button.html">button</option>
+        <option value="input-changed.html">input-changed</option>
+        <option value="slider-input.html" selected>slider-input</option>
+        <option value="next.html">next</option>
+    </select>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script>
+
+      var slider;
+      var parrafos;
+      var dato;
+
+      function setup(){
+        noCanvas();
+        slider = createSlider(12, 20, 16).parent("por-alla");
+        parrafos = selectAll("p");
+        dato = parrafos[parrafos.length-1];
+        dato.style("font-weight","bold");
+        slider.input(cuerpoTipo);
+      }
+
+
+      function cuerpoTipo(){
+        parrafos.forEach(function(p){
+          p.style("font-size", slider.value() + "px");
+        });
+        dato.html(slider.value() + "px");
+      }
+
+    </script>
+  </body>
+</html>

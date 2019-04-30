@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>p5.dom library</title>
+    <style>
+      #menu{
+        position: fixed;
+        bottom:2rem;
+        right:2rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 py-5" id="aca">
+          <h1 class="mb-5">Earthquake</h1>
+          <p>Veamos los registros de un mes de temblores M4.5+ en <span id="por-alla"></span></p>
+          <p><small>Escribe el nombre del país en inglés (Ej: Japan, Philippines, etc.)</small></p>
+        </div>
+      </div>
+    </div>
+
+    <select id="menu" onchange="location=this.value;">
+        <option selected>../</option>
+        <option value="../index.html">index</option>
+        <option value="../button.html">button</option>
+        <option value="../input-changed.html">input-changed</option>
+        <option value="../slider-input.html">slider-input</option>
+        <option value="../next.html">next</option>
+    </select>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script>
+
+      var data;
+      var input;
+      var output;
+      var todos;
+
+      function preload(){
+        data = loadJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_month.geojson");
+      }
+
+      function setup(){
+        noCanvas();
+        input = createInput("").parent("por-alla");
+        output = createElement('ul','').id("resultados").parent("aca")
+        input.changed(buscaTemblor);
+
+      }
+
+      function buscaTemblor(){
+        data.features.forEach(function(d,i){
+          if(d.properties.place.includes(input.value())){
+            var cuando = new Date(d.properties.time);
+            createElement('li','<a href=" ' + d.properties.url + ' " target="_blank">' + d.properties.mag + ' - ' + d.properties.place + ' - ' + cuando + '</a>').parent("resultados");
+          }
+        });
+      }
+
+    </script>
+  </body>
+</html>
