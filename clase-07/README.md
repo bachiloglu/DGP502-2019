@@ -18,7 +18,7 @@ function draw(){
 
 Hay 2 partes funciones principales. Una que se ejecuta una única vez, al inicio, y otra que se ejecuta una y otra vez, para dibujar lo que sea que se programe.
 
-Puedes sumar otras funciones, y eso es lo que revisaremos hoy: https://profesorfaco.github.io/DGP502-2019/clase-07/
+Puedes sumar otras funciones, y eso es lo que revisaremos hoy, junto con una biblioteca-de-la-biblioteca: https://profesorfaco.github.io/DGP502-2019/clase-07/
 
 ---------
 
