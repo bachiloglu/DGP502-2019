@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Para empezar</title>
+</head>
+
+<body>
+    <section id="aqui">
+
+    </section>
+    <footer class="container">
+        <div class="row">
+            <div class="col-12 mx-auto pt-3 pb-5 small text-muted d-flex justify-content-between align-items-center">
+                <div><a href="http://github.com/profesorfaco">http://github.com/profesorfaco/</a></div>
+                <div><a href="mailto:profesor@faco.cl">profesor@faco.cl</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/p5.min.js"></script>
+    <script src="js/p5.dom.min.js"></script>
+
+    <script>
+        var sct = [
+        {
+            nombre: "Taller de Diseño",
+            creditaje: 12,
+            dedicacion: [
+                {nombre: "Felipe Cortez", horas : [18,24,16,12]},
+                {nombre: "María Vargas", horas : [8,12,24,2]},
+                {nombre: "Alberto Orellana", horas : [8,6,4,6]},
+                {nombre: "Francisca Génova", horas : [8,6,4,7]}
+            ] 
+        }, 
+        {
+            nombre: "Seminario de Diseño Gráfico",
+            creditaje: 6,
+            dedicacion: [
+                {nombre: "Felipe Cortez", horas : [8,6,4,5]},
+                {nombre: "María Vargas", horas : [8,6,4,3]},
+                {nombre: "Alberto Orellana", horas : [8,6,4,6]},
+                {nombre: "Francisca Génova", horas : [8,6,4,8]}
+            ]
+        }, 
+        {
+            nombre: "Seminario de Gráfica Computacional",
+            creditaje: 3,
+            dedicacion: [
+                {nombre: "Felipe Cortez", horas : [8,6,4,5]},
+                {nombre: "María Vargas", horas : [8,6,4,7]},
+                {nombre: "Alberto Orellana", horas : [8,6,4,3]},
+                {nombre: "Francisca Génova", horas : [8,6,4,12]}
+            ]
+        }, 
+        {
+            nombre: "Seminario de Gestión",
+            creditaje: 3,
+            dedicacion: [
+                {nombre: "Felipe Cortez", horas : [8,6,4,5]},
+                {nombre: "María Vargas", horas : [8,6,4,7]},
+                {nombre: "Alberto Orellana", horas : [8,6,4,3]},
+                {nombre: "Francisca Génova", horas : [8,6,4,12]}
+            ]
+        }
+        ];
+
+        function setup() {
+            createCanvas(windowWidth, 500).parent("aqui");            
+            background(245);
+            var z = 1;
+            var p = 0;
+            var frase;
+            for(var x = 0; x < sct.length; x++){
+                for(var y = 0; y < sct[x].dedicacion.length; y++){
+                    
+                    for(var a = 0; a < 4; a++){ 
+                        p = p + sct[x].dedicacion[y].horas[a] 
+                    }
+                    
+                    frase = "Durante el último mes, " + sct[x].dedicacion[y].nombre + " dedicó un promedio aproximado de " + Math.round(p/4) + " horas semanales a " + sct[x].nombre + " (" + sct[x].creditaje  + " créditos en SCT-Chile / " + sct[x].creditaje*1.5 + " hrs.)"
+                    
+                    text(frase,20, (20*(z+1)));
+                    
+                    z = z+1;
+
+                    p = 0;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
