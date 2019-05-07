@@ -44,25 +44,25 @@ Se proyecta la siguiente organización de las clases durante el semestre (versi�
 
 [Clase 7 → Martes 30 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-07) → p5.js
 
-[Clase 8 → Martes 7 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-08) → p5.js
+(martes 7 de mayo es semana de receso)
 
-**[Clase 9 → Martes 14 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-09) → Evaluación parcial Nº2**
+[Clase 8 → Martes 14 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-08) → p5.js
 
 (martes 21 de mayo es feriado)
 
-Clase 10 → Martes 28 de mayo → Desarrollo de trabajo final
+**[Clase 9 → Martes 28 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-09) → Evaluación parcial Nº2**
 
-Clase 11 → Martes 4 de junio → Desarrollo de trabajo final
+Clase 10 → Martes 4 de junio → Propuesta de trabajo final
 
-**Clase 12 → Martes 11 de junio → Pre-Entrega final**
+Clase 11 → Martes 11 de junio → Avance en trabajo final
 
-Clase 13 → Martes 18 de junio → Ajuste de trabajo final 
+**Clase 12 → Martes 18 de junio → Pre-Entrega final** 
 
-**Clase 14 → Martes 25 de junio → Entrega final**
+**Clase 13 → Martes 25 de junio → Entrega final**
 
-Clase 15 → Martes 2 de julio → Última Clase de Teóricos → Promedio final
+**Clase 14 → Martes 2 de julio → Última Clase de Teóricos → Promedio final**
 
-Clase 16 → Martes 9 de julio → Semana de Taller → No hay clases
+Clase 15 → Martes 9 de julio → Semana de Taller → No hay clases
 
 (Martes 16 de julio es feriado; y luego vienen las vacaciones de invierno).
 
