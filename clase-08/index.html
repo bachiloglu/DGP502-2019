@@ -4,93 +4,286 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Para empezar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Nuestro trabajo académico</title>
 </head>
 
 <body>
-    <section id="aqui">
+    <section class="container">
+        <div class="row py-5">
+            <div class="col-12 col-sm-10 mx-auto">
 
-    </section>
-    <footer class="container">
-        <div class="row">
-            <div class="col-12 mx-auto pt-3 pb-5 small text-muted d-flex justify-content-between align-items-center">
-                <div><a href="http://github.com/profesorfaco">http://github.com/profesorfaco/</a></div>
-                <div><a href="mailto:profesor@faco.cl">profesor@faco.cl</a></div>
+                <h1>Nuestro trabajo académico</h1>
+                
+                <h3>Diseño, mención en Diseño Gráfico @ Universidad de Chile</h3>
+
+                <h4>Séptimo Semestre</h4>
+                
+                <p class="lead">El Sistema de Créditos Transferibles, denominado SCT-Chile, busca medir, racionalizar y distribuir el trabajo académico de los estudiantes entre las diversas actividades curriculares que componen su plan de estudios.</p>
+                
+                <p>La carrera de Diseño de la Universidad de Chile, en sus dos menciones, <a href="http://profesor.faco.cl/dis/wp-content/uploads/2016/06/decreto_001977-1.pdf">adoptó el SCT-Chile en enero de 2016</a>. En abril de 2019 nos preguntamos por la adopción efectiva.</p>
+                
+                <p>Para hacernos de una respuesta, podemos pensar que <strong>cada uno de los Créditos Transferibles equivale a una fracción de tiempo</strong>. Podríamos tomar como referencia el total de 31 créditos del séptimo semestre y un total de <select id="horas" onchange="operacion()"><option>20</option><option>30</option><option selected>40</option><option>45</option><option>50</option><option>55</option><option>60</option><option>80</option></select> horas de trabajo que se podrían dedicar cada semana a la carrera.</p>
+
+                <p>Luego, relacionando <span id="horaseleccionada">40</span> y 31, tenemos que cada crédito equivale a una fracción de tiempo de <strong><span id="tiempo">1.29</span> horas.</strong> Ahora comparemos tal fracción de tiempo con los hechos; <span id="seleccion" style="position:relative; background:white; border:none;"></span></p>
+                
+                <div id="resultado"></div>
+                
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="js/p5.min.js"></script>
-    <script src="js/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
 
     <script>
-        var sct = [
-        {
-            nombre: "Taller de Diseño",
-            creditaje: 12,
-            dedicacion: [
-                {nombre: "Felipe Cortez", horas : [18,24,16,12]},
-                {nombre: "María Vargas", horas : [8,12,24,2]},
-                {nombre: "Alberto Orellana", horas : [8,6,4,6]},
-                {nombre: "Francisca Génova", horas : [8,6,4,7]}
-            ] 
-        }, 
-        {
-            nombre: "Seminario de Diseño Gráfico",
-            creditaje: 6,
-            dedicacion: [
-                {nombre: "Felipe Cortez", horas : [8,6,4,5]},
-                {nombre: "María Vargas", horas : [8,6,4,3]},
-                {nombre: "Alberto Orellana", horas : [8,6,4,6]},
-                {nombre: "Francisca Génova", horas : [8,6,4,8]}
-            ]
-        }, 
-        {
-            nombre: "Seminario de Gráfica Computacional",
+
+        var horas = 40; 
+        var tiempobruto;
+        var tiempo = 0.67;        
+
+        var sct = [{
+            nombre: "Taller de Diseño Gráfico V",
+            creditaje: 9,
+            directas: 6,
+            dedicacion: [{
+                nombre: "Natasha Romanoff",
+                horas: [24, 18, 12, 9]
+            }, {
+                nombre: "Tony Stark",
+                horas: [24, 9, 12, 9]
+            }, {
+                nombre: "Carol Danvers",
+                horas: [24, 18, 12, 24]
+            }, {
+                nombre: "Peter Parker",
+                horas: [24, 9, 12, 3]
+            }]
+        }, {
+            nombre: "Seminario Gráfica Computacional I",
             creditaje: 3,
-            dedicacion: [
-                {nombre: "Felipe Cortez", horas : [8,6,4,5]},
-                {nombre: "María Vargas", horas : [8,6,4,7]},
-                {nombre: "Alberto Orellana", horas : [8,6,4,3]},
-                {nombre: "Francisca Génova", horas : [8,6,4,12]}
-            ]
-        }, 
-        {
-            nombre: "Seminario de Gestión",
+            directas: 3,
+            dedicacion: [{
+                nombre: "Natasha Romanoff",
+                horas: [3, 3, 3, 3]
+            }, {
+                nombre: "Tony Stark",
+                horas: [3, 3, 3, 3]
+            }, {
+                nombre: "Carol Danvers",
+                horas: [3, 3, 3, 3]
+            }, {
+                nombre: "Peter Parker",
+                horas: [3, 3, 3, 3]
+            }]
+        }, {
+            nombre: "Seminario Producción Audiovisual I",
             creditaje: 3,
-            dedicacion: [
-                {nombre: "Felipe Cortez", horas : [8,6,4,5]},
-                {nombre: "María Vargas", horas : [8,6,4,7]},
-                {nombre: "Alberto Orellana", horas : [8,6,4,3]},
-                {nombre: "Francisca Génova", horas : [8,6,4,12]}
-            ]
+            directas: 3,
+            dedicacion: [{
+                nombre: "Natasha Romanoff",
+                horas: [3, 3, 3, 3]
+            }, {
+                nombre: "Tony Stark",
+                horas: [3, 3, 3, 6]
+            }, {
+                nombre: "Carol Danvers",
+                horas: [3, 3, 9, 3]
+            }, {
+                nombre: "Peter Parker",
+                horas: [3, 12, 3, 3]
+            }]
+        }, {
+            nombre: "Seminario de Diseño Gráfico I",
+            creditaje: 5,
+            directas: 3,
+            dedicacion: [{
+                nombre: "Natasha Romanoff",
+                horas: [5, 6, 7, 10]
+            }, {
+                nombre: "Tony Stark",
+                horas: [0, 14, 32, 10]
+            }, {
+                nombre: "Carol Danvers",
+                horas: [5, 9, 12, 12]
+            }, {
+                nombre: "Peter Parker",
+                horas: [12, 14, 32, 12]
+            }]
+        }, {
+            nombre: "Publicidad",
+            creditaje: 3,
+            directas: 3,
+            dedicacion: [{
+                nombre: "Natasha Romanoff",
+                horas: [3, 3, 3, 3]
+            }, {
+                nombre: "Tony Stark",
+                horas: [4, 4, 5, 7]
+            }, {
+                nombre: "Carol Danvers",
+                horas: [6, 9, 9, 2]
+            }, {
+                nombre: "Peter Parker",
+                horas: [0, 2, 24, 0]
+            }]
+        }, {
+            nombre: "Seminario de Gestión I",
+            creditaje: 3,
+            directas: 3,
+            dedicacion: [{
+                nombre: "Natasha Romanoff",
+                horas: [8, 4, 4, 6]
+            }, {
+                nombre: "Tony Stark",
+                horas: [7, 8, 7, 8]
+            }, {
+                nombre: "Carol Danvers",
+                horas: [12, 0, 3, 5]
+            }, {
+                nombre: "Peter Parker",
+                horas: [0, 0, 2, 3]
+            }]
+        }, {
+            nombre: "Electivo III",
+            creditaje: 3,
+            directas: 3,
+            dedicacion: [{
+                nombre: "Natasha Romanoff",
+                horas: [3, 4, 5, 0]
+            }, {
+                nombre: "Tony Stark",
+                horas: [3, 4, 5, 0]
+            }, {
+                nombre: "Carol Danvers",
+                horas: [3, 4, 5, 7]
+            }, {
+                nombre: "Peter Parker",
+                horas: [3, 4, 5, 4]
+            }]
+        }, {
+            nombre: "Práctica Profesional I",
+            creditaje: 2,
+            directas: 0,
+            dedicacion: [{
+                nombre: "Natasha Romanoff",
+                horas: [1, 1, 1, 1]
+            }, {
+                nombre: "Tony Stark",
+                horas: [0, 0, 0, 0]
+            }, {
+                nombre: "Carol Danvers",
+                horas: [0, 0, 9, 0]
+            }, {
+                nombre: "Peter Parker",
+                horas: [24, 0, 0, 0]
+            }]
         }
         ];
 
-        function setup() {
-            createCanvas(windowWidth, 500).parent("aqui");            
-            background(245);
-            var z = 1;
-            var p = 0;
-            var frase;
-            for(var x = 0; x < sct.length; x++){
-                for(var y = 0; y < sct[x].dedicacion.length; y++){
-                    
-                    for(var a = 0; a < 4; a++){ 
-                        p = p + sct[x].dedicacion[y].horas[a] 
-                    }
-                    
-                    frase = "Durante el último mes, " + sct[x].dedicacion[y].nombre + " dedicó un promedio aproximado de " + Math.round(p/4) + " horas semanales a " + sct[x].nombre + " (" + sct[x].creditaje  + " créditos en SCT-Chile / " + sct[x].creditaje*1.5 + " hrs.)"
-                    
-                    text(frase,20, (20*(z+1)));
-                    
-                    z = z+1;
+        var estudiantes = sct[0].dedicacion.length;
 
-                    p = 0;
-                }
+        var sel, donde;
+
+
+        function operacion(){
+            horas = Number(document.getElementById("horas").value);
+            document.getElementById("horaseleccionada").innerHTML = horas;
+            tiempobruto = 1/(31/horas);
+            tiempo = tiempobruto.toFixed(2);
+            document.getElementById("tiempo").innerHTML = tiempo;
+        }
+
+
+        function setup() {
+            sel = createSelect().parent('seleccion').position(10, -2);
+            sel.option('selecciona una asignatura');
+            sct.forEach(function(a, i) {
+                sel.option(a.nombre);
+            })
+            sel.changed(evento);
+            donde = createDiv('').parent('resultado').id('inside');
+        }
+
+        function evento() {
+            donde.remove();
+            donde = createDiv('').parent('resultado').id('inside').addClass("border-top pt-3");
+            var w = document.getElementById('inside').offsetWidth;
+            var h = (estudiantes * 31);
+            var pos;
+
+            valorcillo = sel.value();
+
+            if (sel.value().includes("Taller")) {
+                pos = 0;
+            } else if (sel.value().includes("Computacional")) {
+                pos = 1;
+            } else if (sel.value().includes("Audiovisual")) {
+                pos = 2;
+            } else if (sel.value().includes("Diseño")) {
+                pos = 3;
+            } else if (sel.value().includes("Publicidad")) {
+                pos = 4;
+            } else if (sel.value().includes("Gestión")) {
+                pos = 5;
+            } else if (sel.value().includes("Electivo")) {
+                pos = 6;
+            } else if (sel.value().includes("Práctica")) {
+                pos = 7;
+            } else {
+                donde.remove();
             }
+
+            createElement('h5', ' A los 31 créditos del séptimo semestre, la asignatura de "' + sct[pos].nombre + '" aporta ' + sct[pos].creditaje).parent("inside");
+
+
+            createP('En condición de dedicar ' +  horas + ' hrs. a todo el trabajo académico, a esta asigntura deberíamos dedicarle ' + (sct[pos].creditaje * tiempo) + ' horas. Pero en las últimas semanas:').parent("inside");
+
+
+            createCanvas(w, h).parent("inside");
+            background(250);
+
+            var total = 0;
+            var promedio = 0;
+
+            noStroke();
+
+            for (var x = 0; x < 4; x++) {
+
+                for (var y = 0; y < 4; y++) {
+
+                    total = total + sct[pos].dedicacion[x].horas[y];
+
+                }
+
+                promedio = total / estudiantes;
+
+                if (x != 0){ translate(0, 31) }
+
+                if (sct[pos].creditaje*tiempo < promedio) {
+                    fill(255, 0, 0, random(100, 200));
+                } else {
+                    fill(0, random(100, 200));
+                }
+
+                rect(0, 0, promedio * (width / 50), 30);
+
+                if (sct[pos].creditaje*tiempo < promedio) {
+                    fill(255, 0, 0);
+                } else {
+                    fill(0);
+                }
+
+                textSize(16);
+
+                text(sct[pos].dedicacion[x].nombre + " le ha dedicado, en promedio, " + promedio + " hrs.", (promedio * (width / 50)) + 10, 20);
+
+                promedio = 0;
+
+                total = 0;
+
+            }
+
         }
     </script>
 
