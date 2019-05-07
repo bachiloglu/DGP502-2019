@@ -1,2 +1,2 @@
 # Seminario Gráfica Computacional I → Clase 9
-### Martes 14 de mayo →  Evaluación parcial Nº2
+### Martes 28 de mayo →  Evaluación parcial Nº2
