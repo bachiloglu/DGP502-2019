@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Nuestro trabajo académico</title>
     <style>
+        body{
+            background: linear-gradient(to bottom, rgba(245, 245, 245, 1) 0%, rgba(255, 255, 255, 1) 100%)
+        }
         select {
             border: none;
             font-size: 99%;
-            background: rgba(0, 100, 255, .1);
+            background: rgba(8, 94, 176, .25);
+        }
+        p{
+            line-height: 1.75;
         }
     </style>
 </head>
@@ -18,27 +24,17 @@
 <body>
     <section class="container">
         <div class="row py-5">
-            <div class="col-12 col-sm-10 mx-auto">
+            <div class="col-11 col-md-10 col-xl-9 mx-auto">
 
-                <h1 class="text-primary">Séptimo Semestre</h1>
+                <h1>Séptimo Semestre</h1>
 
-                <h3>Diseño, mención en Diseño Gráfico @ Universidad de Chile</h3>
+                <h3>Diseño Gráfico / Universidad de Chile</h3>
 
                 <p class="lead">El Sistema de Créditos Transferibles, denominado <a href="https://sct-chile.consejoderectores.cl/">SCT-Chile</a>, busca medir, racionalizar y distribuir el trabajo académico de los estudiantes entre las diversas actividades curriculares que componen su plan de estudios.</p>
 
-                <p>La carrera de Diseño de la Universidad de Chile, en sus dos menciones, <a href="http://profesor.faco.cl/dis/wp-content/uploads/2016/06/decreto_001977-1.pdf">adoptó el SCT-Chile en enero de 2016</a>. Tres años más tarde nos preguntamos: ¿Qué está pasando con la medición, la racionalización y la distribución del trabajo académico de los estudiantes? Para responder, tenemos que considerar, primero, que los créditos SCT que deben aprobarse en séptimo semestre son, en total, 31. Estos créditos se distribuyen en <a href="#" data-toggle="modal" data-target=".tabla-semestral">8 asignaturas</a>. Luego, si intentamos acotar el trabajo académico a
-                    <select id="horas" onchange="operacion()">
-                        <option>20</option>
-                        <option>30</option>
-                        <option selected>40</option>
-                        <option>45</option>
-                        <option>50</option>
-                        <option>55</option>
-                        <option>60</option>
-                        <option>80</option>
-                    </select> horas por semana, una proporción directa nos entregará las horas que, idealmente, tenemos que dedicar a cada asignatura.</p>
+                <p>Nuestra carrera <a href="http://profesor.faco.cl/dis/wp-content/uploads/2016/06/decreto_001977-1.pdf">adoptó el SCT-Chile en enero de 2016</a>; tres años después nos preguntamos: <strong>¿Qué está pasando con la medición, la racionalización y la distribución de nuestro trabajo académico?</strong> Para responder, tenemos que considerar, primero, que los créditos SCT que corresponde obtener en séptimo semestre son <span id="total-creditos">__</span>. La obtención de tales créditos se distribuye en la aprobación de <a href="#" data-toggle="modal" data-target=".tabla-semestral"><span id="total-asignaturas">_</span> asignaturas</a>. Luego, si intentamos acotar el trabajo académico a <select id="horas" onchange="operacion()"><option>20</option><option>30</option><option>40</option><option selected>45</option><option>50</option><option>60</option><option>70</option></select> horas por semana, una proporción directa nos entregará las horas que tenemos que dedicar a cada asignatura según sus créditos.</p>
 
-                <p>¿Pero qué tan lejos está lo real de lo ideal? <span id="seleccion" style="position:relative; background:white; border:none;"></span></p>
+                <p>Cuánto dedicar a <span id="seleccion" style="position:relative; background:white; border:none;"></span></p>
 
                 <div id="resultado"></div>
 
@@ -49,63 +45,15 @@
     <div class="modal fade tabla-semestral" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-
                 <div class="modal-body">
-
                     <table class="table table-hover">
                         <thead>
-                            <tr>
-                                <th>Código</th>
-                                <th>Asignatura</th>
-                                <th class="text-center">Créditos SCT</th>
-                            </tr>
+                            <tr><th>Código</th><th>Asignatura</th><th class="text-center">Créditos SCT</th></tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>DGP501</td>
-                                <td>Taller de Diseño Gráfico V</td>
-                                <td class="text-center">9.0</td>
-                            </tr>
-                            <tr>
-                                <td>DGP502</td>
-                                <td>Seminario Gráfica Computacional I</td>
-                                <td class="text-center">3.0</td>
-                            </tr>
-                            <tr>
-                                <td>DGP503</td>
-                                <td>Seminario Producción Audiovisual I</td>
-                                <td class="text-center">3.0</td>
-                            </tr>
-                            <tr>
-                                <td>DGP504</td>
-                                <td>Seminario Diseño Gráfico I</td>
-                                <td class="text-center">5.0</td>
-                            </tr>
-                            <tr>
-                                <td>DGP505</td>
-                                <td>Publicidad</td>
-                                <td class="text-center">3.0</td>
-                            </tr>
-                            <tr>
-                                <td>DGP506</td>
-                                <td>Seminario de Gestión I</td>
-                                <td class="text-center">3.0</td>
-                            </tr>
-                            <tr>
-                                <td>DGP507</td>
-                                <td>Práctica Profesional I</td>
-                                <td class="text-center">2.0</td>
-                            </tr>
-                            <tr>
-                                <td>DE3</td>
-                                <td>Electivo III</td>
-                                <td class="text-center">3.0</td>
-                            </tr>
+                        <tbody id="tableado">
                         </tbody>
                     </table>
-
                 </div>
-
             </div>
         </div>
     </div>
@@ -115,10 +63,11 @@
 
     <script>
         var estudiantes = 5; // número de estudiantes que presentan testimonio en JSON
-        var horas = 40; // opción por defecto de trabajo académico por semana
-        var creditos = 31; // total de créditos del 7mo. semestre
+        var horas = 45; // opción por defecto para el trabajo por semana
+        var asignaturas = 8; // cantidad de asignaturas del semestre
+        var creditos = 0; // variable para hacer un cálculo
         var sct, sel, donde; // variables que pronto se usarán
-        var url = "https://api.myjson.com/bins/170uju"; // la URL del JSON 
+        var url = "https://api.myjson.com/bins/zy7vu"; // la URL del JSON 
 
         var total = 0; // necesito esta variable para un cálculo, que se hace dentro de un par de ciclos for
         var promedio = 0; // ídem
@@ -130,11 +79,15 @@
         function setup() {
             sel = createSelect().parent('seleccion').id('asignatura').position(10, 0);
             sel.option('selecciona una asignatura');
-            for (var i = 0; i < 7; i++) {
+            for (var i = 0; i < asignaturas; i++) {
                 sel.option(sct[i]["nombre"]);
+                createElement('tr','<td> ' + sct[i]["codigo"] + '</td><td>'+sct[i]["nombre"]+'</td><td class="text-center">'+ sct[i]["creditaje"] +'</td>').parent("tableado");
+                creditos = creditos + sct[i]["creditaje"];
             }
             sel.changed(evento);
             donde = createDiv('').parent('resultado').id('inside');
+            document.getElementById("total-creditos").innerHTML = creditos;
+            document.getElementById("total-asignaturas").innerHTML = asignaturas;
         }
 
         function operacion() {
@@ -145,7 +98,7 @@
 
         function evento() {
             donde.remove();
-            donde = createDiv('').parent('resultado').id('inside').addClass("border-top pt-3");
+            donde = createDiv('').parent('resultado').id('inside').addClass("py-3 text-muted");
             var w = document.getElementById('inside').offsetWidth;
             var h = (estudiantes * 31);
             var pos;
@@ -170,19 +123,15 @@
                 donde.remove();
             }
 
-            createElement('h5', 'La asignatura de "' + sct[pos].nombre + '" aporta ' + sct[pos].creditaje + ' de los ' + creditos + ' créditos SCT del semestre').parent("inside");
+            createElement('h5', 'La asignatura de "' + sct[pos].nombre + '" aporta ' + sct[pos].creditaje + ' de los ' + creditos + ' créditos SCT del séptimo semestre.').parent("inside");
 
             var proporcional = (sct[pos].creditaje * horas) / creditos;
 
-            var proporcional_fix = proporcional.toFixed(2);
+            var proporcional_fix = proporcional.toFixed(1);
 
-            createElement('p', 'A condición de dedicar ' + horas + ' hrs. a todo el trabajo académico, las actividades relacionadas con esta asignatura <strong>exigirían ' + proporcional_fix + ' horas cada semana</strong>.').parent("inside");
-
-            createP('En un registro real, que considera un promedio de las últimas cuatro semanas, ' + estudiantes + ' estudiantes tuvieron que dedicar:').parent("inside");
+            createElement('p', 'A condición de dedicar ' + horas + ' horas a todo el trabajo académico, las actividades relacionadas con esta asignatura exigen, idealmente, <strong>' + proporcional_fix + ' horas cada semana</strong>. En un registro real, que considera un promedio de ' + sct[pos].dedicacion[0].horas.length + ' semanas de trabajo, ' + estudiantes + ' estudiantes tuvieron que dedicarse a "' + sct[pos].nombre  + '" por:').parent("inside");
 
             createCanvas(w, h).parent("inside");
-
-            background(250);
 
             noStroke();
 
@@ -211,8 +160,9 @@
                     text(promedio + " hrs. (" + sct[pos].dedicacion[x].nombre + ")", promedio * (width / horas) + 10, 20);
 
                 } else {
-                    fill(125);
+                    fill(190, 215, 235);
                     rect(0, 0, promedio * (width / horas), 30);
+                    fill(135,145,155);
                     text(promedio + " hrs. (" + sct[pos].dedicacion[x].nombre + ")", promedio * (width / horas) + 10, 20);
 
                 }
@@ -223,7 +173,7 @@
 
             }
 
-            createElement('p', 'Este gráfico se construye mediante consulta a un documento JSON que se encuentra publicado en <a href="https://api.myjson.com/bins/170uju">' + url + '</a>').addClass("py-3 small").parent("inside");
+            createElement('p', '&uarr; Este gráfico se construye mediante consulta al JSON que se encuentra publicado en <a href="https://api.myjson.com/bins/170uju">' + url + '</a>').addClass("mt-3 border-top py-2 small").parent("inside");
 
         }
     </script>
