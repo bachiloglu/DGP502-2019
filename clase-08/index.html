@@ -120,6 +120,9 @@
         var sct, sel, donde; // variables que pronto se usarán
         var url = "https://api.myjson.com/bins/170uju"; // la URL del JSON 
 
+        var total = 0; // necesito esta variable para un cálculo, que se hace dentro de un par de ciclos for
+        var promedio = 0; // ídem
+
         function preload() {
             sct = loadJSON(url);
         }
@@ -181,10 +184,9 @@
 
             background(250);
 
-            var total = 0;
-            var promedio = 0;
-
             noStroke();
+
+            textSize(15);
 
             for (var x = 0; x < estudiantes; x++) {
 
@@ -200,19 +202,20 @@
                     translate(0, 31)
                 }
 
-                var alerta;
-
                 if (proporcional_fix < promedio) {
+                    fill(200,0,0)
+                    rect(0, 0, proporcional_fix * (width / horas), 30);
+                    console.log(proporcional_fix)
                     fill(255, 0, 0);
+                    rect(proporcional_fix * (width / horas), 0, (promedio * (width / horas))-(proporcional_fix * (width / horas)), 30);
+                    text(promedio + " hrs. (" + sct[pos].dedicacion[x].nombre + ")", promedio * (width / horas) + 10, 20);
+
                 } else {
                     fill(125);
+                    rect(0, 0, promedio * (width / horas), 30);
+                    text(promedio + " hrs. (" + sct[pos].dedicacion[x].nombre + ")", promedio * (width / horas) + 10, 20);
+
                 }
-
-                rect(0, 0, promedio * (width / horas), 30);
-
-                textSize(16);
-
-                text(promedio + " hrs. (" + sct[pos].dedicacion[x].nombre + ")", promedio * (width / horas) + 10, 20);
 
                 promedio = 0;
 
