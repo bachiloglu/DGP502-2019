@@ -11,9 +11,24 @@ h1{
 
 h2,h3,h4,h5,h6,strong{
 	font-family: 'Cousine', monospace;
-	font-weight: 700;
-	word-wrap: break-word;
+	font-weight: 700;	
 }
+
+.display-1{
+	font-weight: 700;
+	word-break: break-all;	
+	color: white;
+   	background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(http://www.revistacarrusel.cl/wp-content/uploads/2011/07/capitan-futuro-1024x500_c.jpg) no-repeat;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.display-1:hover {
+   background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)), url(http://www.revistacarrusel.cl/wp-content/uploads/2011/07/capitan-futuro-1024x500_c.jpg) no-repeat;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+};
+
 
 a#especial{
 	font-style: italic;
@@ -24,4 +39,8 @@ a#especial{
 
 a#especial:before{
 	content:"+ ";
+}
+
+button.navbar-toggler{
+	border:none;
 }
