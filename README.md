@@ -48,7 +48,15 @@ Se proyecta la siguiente organización de las clases durante el semestre (versi�
 
 [Clase 8 → Martes 14 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-08) → p5.js
 
-(martes 21 de mayo es feriado)
+(martes 21 de mayo es feriado, luego vino un paro)
+
+**[Clase 9 → Martes 25 de junio](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-09) → Repaso para Evaluación parcial Nº2**
+
+**[Clase 10 → Martes 2 de julio](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-10) → Evaluación parcial Nº2**
+
+**[Clase 11 → Martes 9 de julio](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-11) → Trabajo grupal Final (lo mismo que Nº2, pero con la información de 3 personas**
+
+**Lo que no se vió:**
 
 **[Clase 9 → Martes 28 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-09) → Evaluación parcial Nº2**
 
