@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Cousine:400,400i,700&display=swap');
+
+body{
+	font-family: 'Cousine', monospace;
+	font-weight: 400;
+}
+
+h1{
+	font-weight: 400;	
+}
+
+h2,h3,h4,h5,h6,strong{
+	font-family: 'Cousine', monospace;
+	font-weight: 700;	
+}
+
+a#especial{
+	font-style: italic;
+	font-weight: 400;
+	color:red;
+	text-transform: lowercase;
+}
+
+a#especial:before{
+	content:"+ ";
+}
