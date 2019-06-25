@@ -18,16 +18,39 @@ h2,h3,h4,h5,h6,strong{
 	font-weight: 700;
 	word-break: break-all;	
 	color: white;
-   	background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(http://www.revistacarrusel.cl/wp-content/uploads/2011/07/capitan-futuro-1024x500_c.jpg) no-repeat;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
 }
 
-.display-1:hover {
-   background: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1)), url(http://www.revistacarrusel.cl/wp-content/uploads/2011/07/capitan-futuro-1024x500_c.jpg) no-repeat;
+.display-1:nth-child(1){
+   	background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(https://static.abc.es/media/cultura/2019/02/20/mc-U30920346632g5H--620x349@abc.jpg) no-repeat;
+  	background-size:cover;
+  	background-position: center center;
+  	-webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;	
+}
+
+.display-1:nth-child(2){
+   	background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(https://canalc.com.ar/wp-content/uploads/2018/01/teletubbies-1-1-780x405.jpg) no-repeat;
+  	background-size:cover;
+  	background-position: center center;
    -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-};
+   -webkit-text-fill-color: transparent;	
+}
+
+.display-1:nth-child(3){
+   	background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(https://postgradofau.uchilefau.cl/wp-content/uploads/2013/05/FAU_IMG_MAX_2X3_480x320.jpg) no-repeat;
+  	background-size:cover;
+  	background-position: center center;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;	
+}
+
+.display-1:nth-child(4){
+   	background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(http://www.revistacarrusel.cl/wp-content/uploads/2011/07/capitan-futuro-1024x500_c.jpg) no-repeat;
+  	background-size:cover;
+  	background-position: center center;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;	
+}
 
 
 a#especial{
