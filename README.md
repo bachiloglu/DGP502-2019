@@ -58,17 +58,17 @@ Se proyecta la siguiente organización de las clases durante el semestre (versi�
 
 **Lo que no se vió:**
 
-**[Clase 9 → Martes 28 de mayo](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-09) → Evaluación parcial Nº2**
+Clase 9 → Martes 28 de mayo → Evaluación parcial Nº2
 
 Clase 10 → Martes 4 de junio → Propuesta de trabajo final
 
 Clase 11 → Martes 11 de junio → Avance en trabajo final
 
-**Clase 12 → Martes 18 de junio → Pre-Entrega final** 
+Clase 12 → Martes 18 de junio → Pre-Entrega final
 
-**Clase 13 → Martes 25 de junio → Entrega final**
+Clase 13 → Martes 25 de junio → Entrega final
 
-**Clase 14 → Martes 2 de julio → Última Clase de Teóricos → Promedio final**
+Clase 14 → Martes 2 de julio → Última Clase de Teóricos → Promedio final
 
 Clase 15 → Martes 9 de julio → Semana de Taller → No hay clases
 
