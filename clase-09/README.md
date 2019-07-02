@@ -13,5 +13,5 @@ La evaluación considerará:
 | Página info o "about me" | Hasta **0,5** |
 | Navegación visible y operativa en cada página | Hasta **0,5** |
 | Uso preciso y conciso del HTML, apoyándose en Bootstrap v. 4 | Hasta **0,5**  |
-| Ajuste de CSS | Hasta **0,5** | 
+| Ajuste de CSS | Hasta **0,5** | 
 | **TOTAL ESPERADO**  | **7,0** |
