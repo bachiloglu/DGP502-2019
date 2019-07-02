@@ -41,5 +41,5 @@ La evaluación considerará:
 | Salinas Romo, Ramiro Esteban | Pendiente | Pendiente | P |
 | Sanchez Guerrero, Felipe Andres | Pendiente | Pendiente | P |
 | Uribe Zúñiga, Camila | Pendiente | Pendiente | P |
-| Valenzuela Clandestino, Caterina Andrea | https://github.com/catelate/prueba_02 | https://cnstnzv.github.io/Prueba_02/ | P |
+| Valenzuela Clandestino, Caterina Andrea | https://github.com/catelate/prueba_02 | https://catelate.github.io/prueba_02/ | P |
 | Yastremiz, Sofia | Pendiente | Pendiente | P |
