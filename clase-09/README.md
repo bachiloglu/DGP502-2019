@@ -23,7 +23,7 @@ La evaluación considerará:
 | Acevedo Jiménez, Ian Branco | Pendiente | Pendiente | P |
 | Bruce Vidal, Nicolás Andrés | Pendiente | Pendiente | P |
 | Cabello Zúñiga, Felipe Alexander | Pendiente | Pendiente | P |
-| Caceres Pradenas, Carolina Marcela | Pendiente | Pendiente | P |
+| Caceres Pradenas, Carolina Marcela | https://github.com/carolinwis/Prueba_2/ | https://carolinwis.github.io/Prueba_2/ | P |
 | Castro Saint-Jour, Javiera Belen | Pendiente | Pendiente | P |
 | Catalán Bachiloglu, Fernando Ignacio | Pendiente | Pendiente | P |
 | Céspedes Montoya, Constanza Dominique | https://github.com/cnstnzv/Prueba_02/ | https://cnstnzv.github.io/Prueba_02/ | P |
