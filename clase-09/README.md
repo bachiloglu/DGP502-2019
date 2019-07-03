@@ -24,7 +24,7 @@ La evaluación considerará:
 | Bruce Vidal, Nicolás  | https://nbrucevidal.github.io/Visualizaci-n-Datos-Carga-Acad-mica-FAU/ | P |
 | Cabello Zúñiga, Felipe  | https://childbood.github.io/Evaluacion_2/ | P |
 | Caceres Pradenas, Carolina  | https://carolinwis.github.io/Prueba_2/ | P |
-| Castro Saint-Jour, Javiera | Pendiente | P |
+| Castro Saint-Jour, Javiera | https://jaeezzang.github.io/prueba2/ | P |
 | Catalán Bachiloglu, Fernando | Pendiente | P |
 | Céspedes Montoya, Constanza | https://cnstnzv.github.io/Prueba_02/ | P |
 | Espinoza Miranda, Valentina | https://vale-espinoza.github.io/prueba-02-visualizacion/ | P |
