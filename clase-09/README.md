@@ -25,7 +25,7 @@ La evaluación considerará:
 | Cabello Zúñiga, Felipe  | https://childbood.github.io/Evaluacion_2/ | P |
 | Caceres Pradenas, Carolina  | https://carolinwis.github.io/Prueba_2/ | P |
 | Castro Saint-Jour, Javiera | https://jaeezzang.github.io/prueba2/ | P |
-| Catalán Bachiloglu, Fernando | Pendiente | P |
+| Catalán Bachiloglu, Fernando | https://bachiloglu.github.io/DGP502/Evaluacion-02.1/ | P |
 | Céspedes Montoya, Constanza | https://cnstnzv.github.io/Prueba_02/ | P |
 | Espinoza Miranda, Valentina | https://vale-espinoza.github.io/prueba-02-visualizacion/ | P |
 | Fonseca Duhalde, Sofia | https://sofiafonseca.github.io/entrega02/ | P |
