@@ -29,12 +29,9 @@ La evaluación considerará:
 | Céspedes Montoya, Constanza | https://cnstnzv.github.io/Prueba_02/ | P |
 | Espinoza Miranda, Valentina | https://vale-espinoza.github.io/prueba-02-visualizacion/ | P |
 | Fonseca Duhalde, Sofia | https://sofiafonseca.github.io/entrega02/ | P |
-| Gonzalez Guerra, Ricardo | Pendiente | P |
 | Gonzalez Soto, Claudia  | https://medvsa.github.io/Prueba_02/ | P |
 | Grandón Illanes, Cristina | https://grandoncristina.github.io/evaluacion02/ | P |
-| Kau Gutierrez, Mariana | Pendiente | P |
 | Lara Figueroa, Julio | https://lyytoral.github.io/Evaluacion-parcial-N-2/ | P |
-| López Jaque, Katherine | Pendiente | P |
 | López Urbano, Tomás | https://disfrozen.github.io/seminario_eva_02/ | P |
 | Maturana Retamal, Estefania | Pendiente | P |
 | Reyes García, Deianira | https://deianira-reyes.github.io/Prueba2_Visualizacion/ | P |
