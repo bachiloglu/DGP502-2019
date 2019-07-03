@@ -40,7 +40,7 @@ La evaluación considerará:
 | Reyes García, Deianira | https://deianira-reyes.github.io/Prueba2_Visualizacion/ | P |
 | Salinas Romo, Ramiro | Pendiente | P |
 | Sanchez Guerrero, Felipe | https://deltaover.github.io/Seminario-Evaluacion-2/ | P |
-| Uribe Zúñiga, Camila | Pendiente | P |
+| Uribe Zúñiga, Camila | https://camiuribez.github.io/Segunda-E/ | P |
 | Valenzuela Clandestino, Caterina | https://catelate.github.io/prueba_02/ | P |
 | Vidal, Benjamin | https://ilusionista2000.github.io/Evaluacion-Parcial-2/ | P |
 | Yastremiz, Sofia | https://syastre.github.io/semgrafcomp_eval-2/ | P |
