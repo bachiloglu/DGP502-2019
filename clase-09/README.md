@@ -33,7 +33,7 @@ La evaluación considerará:
 | Grandón, Cristina | https://grandoncristina.github.io/evaluacion02/ | P |
 | Lara, Julio | https://lyytoral.github.io/Evaluacion-parcial-N-2/ | P |
 | López, Tomás | https://disfrozen.github.io/seminario_eva_02/ | P |
-| Maturana, Estefania | Pendiente | P |
+| Maturana, Estefania | https://escamare.github.io/Evaluacion-02/ | P |
 | Reyes, Deianira | https://deianira-reyes.github.io/Prueba2_Visualizacion/ | P |
 | Salinas, Ramiro | Pendiente | P |
 | Sanchez, Felipe | https://deltaover.github.io/Seminario-Evaluacion-2/ | P |
