@@ -56,7 +56,7 @@ Se proyecta la siguiente organización de las clases durante el semestre (versi�
 
 **[Clase 11 → Martes 9 de julio](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-11) → Trabajo grupal Final (lo mismo que Nº2, pero con la información de 3 personas**
 
-#### Lo que no se vió:
+### Lo que no se vió:
 
 **El plan original era:**
 
