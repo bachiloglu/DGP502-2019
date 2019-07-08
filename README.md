@@ -74,6 +74,18 @@ Clase 15 → Martes 9 de julio → Semana de Taller → No hay clases
 
 (Martes 16 de julio es feriado; y luego vienen las vacaciones de invierno).
 
+**Como no se vió lo recién indicado, las evaluaciones se modifican de la siguiente manera: **
+
+- 1 nota por puntos de asistencia y puntualidad, acumulados clase a clase;
+
+- 1 nota por evaluación parcial Nº1;
+
+- 1 nota por evaluación parcial Nº2;
+
+- 2 notas por trabajo final.
+
+- - - - - - - - 
+
 #### Bibliografía
 
 - Crockford, D. (2008). *JavaScript: The Good Parts*.
