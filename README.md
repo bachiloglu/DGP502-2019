@@ -56,7 +56,9 @@ Se proyecta la siguiente organización de las clases durante el semestre (versi�
 
 **[Clase 11 → Martes 9 de julio](https://github.com/profesorfaco/DGP502-2019/tree/gh-pages/clase-11) → Trabajo grupal Final (lo mismo que Nº2, pero con la información de 3 personas**
 
-**Lo que no se vió:**
+#### Lo que no se vió:
+
+**El plan original era:**
 
 Clase 9 → Martes 28 de mayo → Evaluación parcial Nº2
 
@@ -74,7 +76,7 @@ Clase 15 → Martes 9 de julio → Semana de Taller → No hay clases
 
 (Martes 16 de julio es feriado; y luego vienen las vacaciones de invierno).
 
-**Como no se vió lo recién indicado, las evaluaciones se modifican de la siguiente manera:**
+**Como el plan origintal no se implementó, las evaluaciones se modifican de la siguiente manera:**
 
 - 1 nota por puntos de asistencia y puntualidad, acumulados clase a clase;
 
