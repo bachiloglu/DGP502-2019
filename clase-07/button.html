@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>p5.dom library</title>
+    <style>
+      #menu{
+        position: fixed;
+        bottom:2rem;
+        right:2rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col py-5" id="aca">
+        </div>
+      </div>
+    </div>
+
+    <select id="menu" onchange="location=this.value;">
+        <option value="index.html">index</option>
+        <option value="button.html" selected>button</option>
+        <option value="input-changed.html">input-changed</option>
+        <option value="slider-input.html">slider-input</option>
+        <option value="next.html">next</option>
+    </select>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script>
+
+      var titulo;
+      var boton;
+      var cuerpo;
+
+      function setup(){
+        noCanvas();
+        titulo = createElement("h1","p5.dom.js").parent("aca");
+        titulo.addClass("pb-5");
+        boton = createButton("clic!").parent("aca");
+        boton.mousePressed(negro);
+        boton.mouseReleased(blanco);
+        cuerpo = selectAll("body")[0];
+      }
+
+      function negro(){
+        cuerpo.style("background","#000").style("color","#fff");
+      }
+      
+      function blanco(){
+        cuerpo.style("background","#fff").style("color","#000");
+      }
+
+    </script>
+  </body>
+</html>

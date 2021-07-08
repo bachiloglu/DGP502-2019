@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>p5.dom library</title>
+    <style>
+      #menu{
+        position: fixed;
+        bottom:2rem;
+        right:2rem;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col py-5">
+          <h1 class="mb-5">Input con changed <span id="por-alla" class="badge"></span></h1>
+          <p>Son varios párrafos</p>
+          <p>cada párrafo podría ser modificado</p>
+          <p>pero solo modificaré el último</p>
+          <p>¡Presiona Enter o Tab!</p>
+        </div>
+      </div>
+    </div>
+
+    <select id="menu" onchange="location=this.value;">
+        <option value="index.html">index</option>
+        <option value="button.html">button</option>
+        <option value="input-changed.html" selected>input-changed</option>
+        <option value="slider-input.html">slider-input</option>
+        <option value="next.html">next</option>
+    </select>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script>
+
+      var input;
+      var todoParrafo;
+      var ultimoParrafo;
+
+      function setup(){
+        noCanvas();
+        todoParrafo = selectAll("p");
+        ultimoParrafo = todoParrafo[todoParrafo.length-1];
+        ultimoParrafo.style("font-weight","bold");
+        input = createInput("escribe algo…").parent("por-alla");
+        input.changed(nuevoTexto);
+      }
+
+      function nuevoTexto(){
+          ultimoParrafo.html(input.value());
+      }
+
+    </script>
+  </body>
+</html>

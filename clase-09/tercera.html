@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Bienvenidos | Mis datos</title>
+  </head>
+  <body class="bg-light">
+  <div class="container pb-5">
+    <div class="row pb-5">  
+      <div class="col-sm-10 pt-4 pb-2">
+        <h1>Mis visualizaciones</h1>
+      </div>
+      <div class="col-sm-2 text-right pt-5 pb-2 d-none d-sm-block">
+        <a href="info.html" id="especial">Info</a>
+      </div>
+      <div class="col-sm-12 p-0 mb-3" id="vis">
+        <!--acá estoy metiendo el canvas con p5.js-->
+      </div>
+      <div class="col-sm-8">
+        <h3 class="border-bottom py-2">Esto trata de esto</h3>
+        <p>Minions ipsum bananaaaa poulet tikka masala belloo! Potatoooo poulet tikka masala uuuhhh. Aaaaaah underweaaar baboiii pepete bee do bee do bee do chasy aaaaaah. Para tú gelatooo la bodaaa tulaliloo. Tatata bala tu gelatooo gelatooo baboiii belloo! Bananaaaa uuuhhh gelatooo poulet tikka masala belloo! Aaaaaah. Baboiii belloo! Gelatooo poopayee me want bananaaa! Poulet tikka masala para tú wiiiii po kass. Me want bananaaa! baboiii uuuhhh tatata bala tu gelatooo para tú hahaha.</p>
+      </div>
+      <div class="col-sm-4 small">
+        <h5 class="border-bottom pt-3 pb-2">Esto es lateral</h5>
+        <p>Lalalal</p>
+      </div>
+    </div><!--acá cierro el row-->
+  </div><!--acá cierro el container-->
+
+  <nav class="navbar fixed-bottom navbar-expand-md navbar-light bg-light">
+    <div class="container border-top">
+      <a class="navbar-brand" href="index.html">Mis visualizaciones</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Portada</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="segunda.html">Segunda</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="tercera.html">Tercera</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cuarta.html">Cuarta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="quinta.html">Quinta</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">Más info</a>
+          </li>                           
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Estábamos en p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script>
+      var w, h;
+      function setup(){
+        var w = document.getElementById('vis').offsetWidth;
+        var h = w/2;
+        createCanvas(w,h).parent("vis");
+        background(200);
+      }
+      function draw(){
+        
+      }
+    </script>
+  </body>
+</html>

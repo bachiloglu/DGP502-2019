@@ -1,6 +1,8 @@
 # Seminario Gráfica Computacional I → Clase 8
 
-### Martes 7 de mayo → p5.js (segunda parte)
+### Martes 14 de mayo → p5.js (segunda parte)
+
+https://profesorfaco.github.io/DGP502-2019/clase-08/
 
 - - - - - - - 
 
